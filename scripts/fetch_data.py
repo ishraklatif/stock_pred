@@ -63,6 +63,144 @@ DISALLOWED_REQUIRED_PARAMS = {"provider", "session", "client", "api_key"}
 # Some functions may return very wide/long dataframes; limit printing/log verbosity
 MAX_SHOW_ROWS = 5
 
+# ─────────────────────────────────────────────────────────
+# Local index fetchers (OpenBB → yfinance → CSV)
+# ─────────────────────────────────────────────────────────
+from datetime import timedelta
+
+try:
+    from openbb import obb
+    HAS_OPENBB = True
+except Exception:
+    HAS_OPENBB = False
+
+try:
+    import yfinance as yf
+    HAS_YF = True
+except Exception:
+    HAS_YF = False
+
+
+def _save_versioned_parquet(df: pd.DataFrame, ticker: str) -> str:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.utcnow().strftime("%Y%m%d")
+    fname = f"{ticker.replace('^','')}_{stamp}.parquet"
+    out = DATA_DIR / "cache" / fname
+    out.parent.mkdir(parents=True, exist_ok=True)
+    df.to_parquet(out, index=False)
+    print(f"[INFO] Cached {ticker} → {out}")
+    return str(out)
+
+
+def fetch_foreign_indices(tickers=["SPY", "^FTSE", "^N225"], months=6):
+    from datetime import datetime, timedelta
+    start = datetime.utcnow() - timedelta(days=months * 30)
+    end = datetime.utcnow()
+
+    data_map = {}
+
+    for t in tickers:
+        print(f"[INFO] Fetching {t} ...")
+        df = None
+
+        # Try OpenBB first
+        try:
+            from openbb import obb
+            df = obb.equity.price.historical(
+                ticker=t, start_date=start.strftime("%Y-%m-%d"), end_date=end.strftime("%Y-%m-%d")
+            )
+            if isinstance(df, pd.DataFrame) and not df.empty:
+                df.reset_index(inplace=True)
+                df.rename(columns={
+                    "Date": "date", "Open": "open", "High": "high",
+                    "Low": "low", "Close": "close", "Volume": "volume"
+                }, inplace=True, errors="ignore")
+                df["date"] = pd.to_datetime(df["date"])
+        except Exception as e:
+            print(f"[WARN] OpenBB fetch failed for {t}: {e}")
+
+        # Fallback to yfinance
+        if df is None or df.empty:
+            try:
+                import yfinance as yf
+                yf_df = yf.download(t, start=start, end=end, progress=False)
+                if not yf_df.empty:
+                    df = yf_df.reset_index().rename(columns={
+                        "Date": "date", "Open": "open", "High": "high",
+                        "Low": "low", "Close": "close", "Volume": "volume"
+                    })
+                    df["date"] = pd.to_datetime(df["date"])
+            except Exception as e:
+                print(f"[WARN] yfinance fetch failed for {t}: {e}")
+
+        if df is None or df.empty:
+            print(f"[ERROR] No data for {t}")
+            continue
+
+        df = df.dropna(subset=["close"]).sort_values("date").reset_index(drop=True)
+        _save_versioned_parquet(df, t)
+        data_map[t] = df
+
+    return data_map
+
+
+
+def _load_csv_fallback(csv_path: str) -> Optional[pd.DataFrame]:
+    p = Path(csv_path)
+    if not p.exists():
+        return None
+    try:
+        df = pd.read_csv(p, parse_dates=["date"])
+        cols = ["date", "open", "high", "low", "close", "volume"]
+        missing = [c for c in cols if c not in df.columns]
+        if missing:
+            print(f"[WARN] CSV missing columns {missing}; attempting best-effort subset.")
+        df = df[[c for c in cols if c in df.columns]].copy()
+        df["date"] = pd.to_datetime(df["date"]).dt.tz_localize(None)
+        return df
+    except Exception as e:
+        print(f"[WARN] Failed to read fallback CSV: {e}")
+        return None
+
+
+def fetch_local_index(ticker="^DSEX", months=3, csv_path=None):
+    import bdshare, pandas as pd
+    print(f"[INFO] Attempting to fetch DSEX index data from bdshare or fallback CSV")
+
+    df = None
+    try:
+        # Try bdshare — but this only works for company symbols, not the DSEX index
+        df = bdshare.get_hist_data("DSEX")
+        if df is not None and not df.empty:
+            print("[INFO] Loaded data via bdshare.get_hist_data('DSEX')")
+    except Exception as e:
+        print(f"[WARN] bdshare.get_hist_data('DSEX') failed: {e}")
+        df = None
+
+    # Fallback to CSV (most reliable for DSEX)
+    if (df is None or df.empty) and csv_path:
+        print(f"[INFO] Falling back to CSV → {csv_path}")
+        df = _load_csv_fallback(csv_path)
+
+    if df is None or df.empty:
+        raise RuntimeError("❌ Failed to fetch DSEX time-series data: bdshare and CSV both unavailable.")
+
+    df.columns = df.columns.str.lower().str.strip()
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df = df.dropna(subset=["date"]).sort_values("date").reset_index(drop=True)
+    for col in ["open", "high", "low", "close", "volume"]:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    _save_versioned_parquet(df, ticker)
+    return df
+
+
+
+
+
+
+
 
 # ------------------------------
 # Excel helpers
@@ -277,98 +415,185 @@ def normalize_result(result: Any, symbol: str, func_name: str) -> pd.DataFrame:
 # ------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Fetch all symbol-accepting bdshare functions for shares listed in Excel.")
-    parser.add_argument("--excel", "-e", required=True, help="Path to Excel file with symbols (e.g., data/shares.xlsx).")
+    parser.add_argument("--excel", "-e", required=False, help="Path to Excel file with symbols (e.g., data/shares.xlsx).")
     parser.add_argument("--sheet", "-s", default=None, help="Excel sheet name (optional).")
     parser.add_argument("--column", "-c", default=None, help="Column name containing symbols (auto-detect if omitted).")
     parser.add_argument("--outdir", "-o", default=None, help="Output directory. Default is project ROOT/data.")
     parser.add_argument("--dryrun", "-n", action="store_true", help="Only list candidate functions; do not execute.")
+    
+    # CLI mode for US-1.3
+    parser.add_argument("--mode", choices=["local-index", "bdshare-scan", "historical"], default="local-index",
+                    help="local-index = fetch DSEX index, bdshare-scan = run all bdshare funcs, historical = fetch OHLCV per ticker")
+
+    parser.add_argument("--ticker", default="^DSEX", help="Index ticker (default ^DSEX)")
+    parser.add_argument("--months", type=int, default=3, help="How many months of history to fetch")
+    parser.add_argument("--csv-fallback", default=str(ROOT_DIR / "data" / "dsex_fallback.csv"),
+                        help="CSV fallback path for local index")
+    parser.add_argument("--alias-out", default=str(DATA_DIR / "dsex.parquet"),
+                        help="Optional stable alias parquet path (copied to) for easy downstream use")
+
+    parser.add_argument("--limit", type=int, default=None,
+    help="Limit number of symbols to fetch (default: all)")
+
+
     args = parser.parse_args()
 
-    # Load symbols (limit = 5 by requirement)
-    symbols = load_symbols_from_excel(args.excel, args.column, args.sheet, limit=5)
-    if not symbols:
-        sys.stderr.write("[ERROR] No symbols loaded from Excel.\n")
-        sys.exit(1)
+    print(f"[MODE] Running in {args.mode.upper()} mode")
 
-    print(f"[INFO] Loaded {len(symbols)} symbols from {args.excel}: {symbols[:min(5, len(symbols))]}")
-
-    # Discover bdshare functions
-    funcs = discover_symbol_functions()
-    if not funcs:
-        sys.stderr.write("[ERROR] No bdshare functions found that accept a symbol-like parameter.\n")
-        sys.exit(2)
-
-    print(f"[INFO] Discovered {len(funcs)} candidate functions:")
-    for qn, _, symparam in funcs:
-        print(f"  - {qn}({symparam}=...)")
-
-    if args.dryrun:
-        print("[DRYRUN] Exiting without executing functions.")
+    if args.mode == "local-index":
+        df = fetch_local_index(ticker=args.ticker, months=args.months, csv_path=args.csv_fallback)
+        # Optional stable alias copy
+        try:
+            if args.alias_out:
+                df.to_parquet(args.alias_out, index=False)
+                print(f"[INFO] Wrote alias parquet → {args.alias_out}")
+        except Exception as e:
+            print(f"[WARN] Failed to write alias parquet: {e}")
         return
 
-    # Determine the output directory (absolute)
-    outdir_path = Path(args.outdir).resolve() if args.outdir else DATA_DIR
-    outdir_path.mkdir(parents=True, exist_ok=True)
+    elif args.mode == "bdshare-scan" and not args.excel:
+        parser.error("--excel is required in bdshare-scan mode.")
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    manifest: Dict[str, Any] = {
-        "run_at": timestamp,
-        "excel": str(resolve_excel_path(args.excel)),
-        "sheet": args.sheet,
-        "column": args.column,
-        "outdir": str(outdir_path),
-        "symbols_count": len(symbols),
-        "functions_count": len(funcs),
-        "functions": {},
-    }
+    # Else keep your existing bdshare discovery flow:
+    elif args.mode == "bdshare-scan":
 
-    # Execute each function for each symbol, write one CSV per function
-    for qname, func, symbol_param in funcs:
-        print(f"\n[RUN] {qname} for {len(symbols)} symbols...")
 
-        per_func_frames = []
-        per_func_status = {"success": [], "failure": []}
+        # Load symbols (limit = 5 by requirement)
+        symbols = load_symbols_from_excel(args.excel, args.column, args.sheet, limit=args.limit)
+
+        if not symbols:
+            sys.stderr.write("[ERROR] No symbols loaded from Excel.\n")
+            sys.exit(1)
+
+        print(f"[INFO] Loaded {len(symbols)} symbols from {args.excel}: {symbols[:min(5, len(symbols))]}")
+
+        # Discover bdshare functions
+        funcs = discover_symbol_functions()
+        if not funcs:
+            sys.stderr.write("[ERROR] No bdshare functions found that accept a symbol-like parameter.\n")
+            sys.exit(2)
+
+        print(f"[INFO] Discovered {len(funcs)} candidate functions:")
+        for qn, _, symparam in funcs:
+            print(f"  - {qn}({symparam}=...)")
+
+        if args.dryrun:
+            print("[DRYRUN] Exiting without executing functions.")
+            return
+
+        # Determine the output directory (absolute)
+        outdir_path = Path(args.outdir).resolve() if args.outdir else DATA_DIR
+        outdir_path.mkdir(parents=True, exist_ok=True)
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        manifest: Dict[str, Any] = {
+            "run_at": timestamp,
+            "excel": str(resolve_excel_path(args.excel)),
+            "sheet": args.sheet,
+            "column": args.column,
+            "outdir": str(outdir_path),
+            "symbols_count": len(symbols),
+            "functions_count": len(funcs),
+            "functions": {},
+        }
+
+        # Execute each function for each symbol, write one CSV per function
+        for qname, func, symbol_param in funcs:
+            print(f"\n[RUN] {qname} for {len(symbols)} symbols...")
+
+            per_func_frames = []
+            per_func_status = {"success": [], "failure": []}
+
+            for sym in symbols:
+                try:
+                    # Call function with keyword for the symbol param
+                    result = func(**{symbol_param: sym})
+                    df = normalize_result(result, sym, qname)
+                    per_func_frames.append(df)
+                    per_func_status["success"].append(sym)
+
+                    # light preview
+                    if hasattr(df, "head"):
+                        _ = df.head(MAX_SHOW_ROWS)
+                        print(f"  ✓ {sym}: {len(df)} rows (showing up to {MAX_SHOW_ROWS})")
+                    else:
+                        print(f"  ✓ {sym}: (non-DataFrame result)")
+
+                except Exception as e:
+                    per_func_status["failure"].append({"symbol": sym, "error": str(e)})
+                    print(f"  ✗ {sym}: {e}")
+
+            # Save a CSV if any success
+            if per_func_frames:
+                out_df = pd.concat(per_func_frames, ignore_index=True)
+                # Sanitize filename
+                safe_name = qname.replace(".", "_").replace("/", "_")
+                csv_path = (outdir_path / f"{safe_name}__{timestamp}.csv")
+                out_df.to_csv(csv_path, index=False)
+                print(f"[OK] Wrote {len(out_df)} rows to {csv_path}")
+                per_func_status["csv"] = str(csv_path)
+            else:
+                print(f"[WARN] No successful rows for {qname}")
+
+            manifest["functions"][qname] = per_func_status
+
+        # Write manifest (always alongside CSVs)
+        manifest_path = (outdir_path / f"manifest_{timestamp}.json")
+        with open(manifest_path, "w", encoding="utf-8") as f:
+            json.dump(manifest, f, ensure_ascii=False, indent=2)
+        print(f"\n[OK] Manifest written to {manifest_path}")
+        print("[DONE]")
+        return
+    elif args.mode == "historical":
+        import datetime as dt
+        from bdshare import get_basic_hist_data
+
+        if not args.excel:
+            parser.error("--excel is required in historical mode (to read company tickers).")
+
+        symbols = load_symbols_from_excel(args.excel, args.column, args.sheet, limit=args.limit)
+        print(f"[INFO] Loaded {len(symbols)} symbols for historical fetch: {symbols}")
+
+        start = dt.datetime.now().date() - dt.timedelta(days=args.months * 30)
+        end = dt.datetime.now().date()
+
+        outdir_path = Path(args.outdir or DATA_DIR / "cache").resolve()
+        outdir_path.mkdir(parents=True, exist_ok=True)
+
+        manifest = {"run_at": datetime.now().strftime("%Y%m%d_%H%M%S"), "symbols": [], "errors": []}
 
         for sym in symbols:
             try:
-                # Call function with keyword for the symbol param
-                result = func(**{symbol_param: sym})
-                df = normalize_result(result, sym, qname)
-                per_func_frames.append(df)
-                per_func_status["success"].append(sym)
+                print(f"[INFO] Fetching {sym} historical data ({start} → {end})...")
+                df = get_basic_hist_data(start, end, sym)
+                if df is None or df.empty:
+                    raise ValueError("Empty dataframe returned")
 
-                # light preview
-                if hasattr(df, "head"):
-                    _ = df.head(MAX_SHOW_ROWS)
-                    print(f"  ✓ {sym}: {len(df)} rows (showing up to {MAX_SHOW_ROWS})")
-                else:
-                    print(f"  ✓ {sym}: (non-DataFrame result)")
+                df.to_csv(outdir_path / f"{sym}_hist.csv", index=False)
+                print(f"✅ Saved → {outdir_path / f'{sym}_hist.csv'} ({len(df)} rows)")
+                manifest["symbols"].append(sym)
 
             except Exception as e:
-                per_func_status["failure"].append({"symbol": sym, "error": str(e)})
-                print(f"  ✗ {sym}: {e}")
+                print(f"⚠️ {sym}: {e}")
+                manifest["errors"].append({"symbol": sym, "error": str(e)})
 
-        # Save a CSV if any success
-        if per_func_frames:
-            out_df = pd.concat(per_func_frames, ignore_index=True)
-            # Sanitize filename
-            safe_name = qname.replace(".", "_").replace("/", "_")
-            csv_path = (outdir_path / f"{safe_name}__{timestamp}.csv")
-            out_df.to_csv(csv_path, index=False)
-            print(f"[OK] Wrote {len(out_df)} rows to {csv_path}")
-            per_func_status["csv"] = str(csv_path)
-        else:
-            print(f"[WARN] No successful rows for {qname}")
+        # Write manifest summary
+        manifest_path = outdir_path / f"historical_manifest_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        with open(manifest_path, "w") as f:
+            json.dump(manifest, f, indent=2)
+        print(f"[DONE] Manifest saved → {manifest_path}")
+        return
+            
 
-        manifest["functions"][qname] = per_func_status
-
-    # Write manifest (always alongside CSVs)
-    manifest_path = (outdir_path / f"manifest_{timestamp}.json")
-    with open(manifest_path, "w", encoding="utf-8") as f:
-        json.dump(manifest, f, ensure_ascii=False, indent=2)
-    print(f"\n[OK] Manifest written to {manifest_path}")
-    print("[DONE]")
+    else:
+        parser.error(f"Unknown mode: {args.mode}")
 
 
 if __name__ == "__main__":
     main()
+
+
+#python fetch_data.py --mode bdshare-scan --excel data/shares.xlsx --column "TRADING CODE" --outdir ../data/cache --limit 1
+
+#python fetch_data.py --mode historical --excel data/shares.xlsx --column "TRADING CODE" --outdir ../data/cache --months 1 --limit 1
+
