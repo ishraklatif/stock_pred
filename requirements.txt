@@ -1,0 +1,7 @@
+darts==0.30.0
+openbb==4.5.0
+lightgbm==4.2.0
+xgboost==2.0.3
+yfinance==0.2.36
+python-dotenv==1.0.1
+bdshare
