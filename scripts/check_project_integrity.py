@@ -18,6 +18,12 @@ import pandas as pd
 import yaml
 import numpy as np
 
+# Add project root so scripts/ becomes importable
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+
 
 # =====================================================================
 # Helper Functions
@@ -200,20 +206,17 @@ def step_model_initialization():
 
 def step_validate_search_config():
     from scripts.hparam_search import load_search_config
-    cfg = load_search_config()
+    search_space, data_cfg = load_search_config()
 
-    if "search_space" not in cfg:
-        raise ValueError("Missing 'search_space' at top-level in config-search.yaml")
-
-    search = cfg["search_space"]
-    if not isinstance(search, dict):
+    if not isinstance(search_space, dict):
         raise ValueError("'search_space' must be dict")
 
-    for k, v in search.items():
+    for k, v in search_space.items():
         if not isinstance(v, list):
             raise ValueError(f"search_space['{k}'] must be a list")
 
-    print("[INFO] search_space keys:", list(search.keys()))
+    print("[INFO] search_space keys:", list(search_space.keys()))
+
 
 
 # =====================================================================

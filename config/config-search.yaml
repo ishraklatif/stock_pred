@@ -10,32 +10,20 @@ search_space:
   attention_head_size: [1]
   dropout: [0.1, 0.3, 0.5]
 
-  # Optimizer params
+  # Optimizer
   learning_rate: [0.0001, 0.0003]
   weight_decay: [0.0, 0.0001, 0.001]
 
-  # Training
+  # Training parameters
   batch_size: [32, 64]
   max_epochs: [20]
 
-
-# ------------------------------------------------------
-# Required for both train.py and hparam_search.py
-# ------------------------------------------------------
-
+# Data (must remain at top-level but below search_space)
 data:
   max_encoder_length: 60
   max_prediction_length: 5
   target: "close"
   time_idx: "time_idx"
   group_id: "series"
-
-  # <<< THIS FIXES YOUR ERROR >>>
-  static_categoricals: ["series", "sector_id"]
-  known_future_reals: ["time_idx"]
-
-
-# (Optional model section — used by train.py if needed)
-model:
   static_categoricals: ["series", "sector_id"]
   known_future_reals: ["time_idx"]

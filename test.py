@@ -87,11 +87,25 @@
 # print(df[df["close"].isna()].head())
 # print(df.groupby("series")["close"].apply(lambda x: x.isna().sum()).sort_values(ascending=False).head(20))
 
+# import pandas as pd
+
+# df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
+
+# missing = df[df["sector_id"] == "Unknown"]["series"].unique()
+# print("Companies without sector_id:")
+# for s in missing:
+#     print(" -", s)
+
 import pandas as pd
 
-df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
+df_train = pd.read_parquet("data/tft_reduced/train.parquet")
+df_val = pd.read_parquet("data/tft_reduced/val.parquet")
+df_test = pd.read_parquet("data/tft_reduced/test.parquet")
 
-missing = df[df["sector_id"] == "Unknown"]["series"].unique()
-print("Companies without sector_id:")
-for s in missing:
-    print(" -", s)
+columns = sorted(df_train.columns)
+
+with open("all_features.txt", "w") as f:
+    for c in columns:
+        f.write(c + "\n")
+
+print("Saved all feature names to all_features.txt")
