@@ -1,24 +1,76 @@
-# Ignore Python virtual environment
+# -------------------------
+# Python virtual environment
+# -------------------------
 .venv/
+venv/
 
-# Ignore Jupyter notebooks checkpoints
-.ipynb_checkpoints/
-
-# Ignore IDE settings (optional)
-.vscode/
-.idea/
-
-# Ignore Python cache files
+# -------------------------
+# Python cache
+# -------------------------
 __pycache__/
 *.py[cod]
 *.so
 
-# Ignore data caches and artifacts
-cache/
-artifacts/
-*.parquet
-*.csv
-*.log
+# -------------------------
+# Jupyter notebooks
+# -------------------------
+.ipynb_checkpoints/
 
-# Ignore environment files
+# -------------------------
+# IDE / OS files
+# -------------------------
+.vscode/
+.idea/
+.DS_Store
+
+# -------------------------
+# Project data
+# (raw, processed, merged)
+# -------------------------
+data/**/*.parquet
+data/**/*.csv
+data/**/*.json
+data/**/*.xlsx
+data/**/raw/
+data/**/raw_companies/
+data/**/raw_macro/
+data/**/raw_market/
+data/**/tft_ready/
+data/**/tft_ready_multiseries/
+data/**/sentiment/
+data/**/processed/
+data/**/processed_calender/
+data/**/processed_companies/
+data/**/processed_macro/
+data/**/processed_macro_market/
+data/**/merged/
+
+# -------------------------
+# Logs, artifacts, temp
+# -------------------------
+*.log
+logs/
+artifacts/
+cache/
+tmp/
+temp/
+
+# -------------------------
+# Model checkpoints
+# -------------------------
+checkpoints_tft/
+checkpoints_search/
+*.ckpt
+
+# -------------------------
+# Lightning / PyTorch
+# -------------------------
+lightning_logs/
+wandb/
+tensorboard/
+
+# -------------------------
+# Environment files
+# -------------------------
 .env
+.env.*

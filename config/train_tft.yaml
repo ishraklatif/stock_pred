@@ -1,0 +1,42 @@
+# ================================================
+# TRAINING CONFIG FOR MULTISERIES TFT (ANTI-OVERFITTING)
+# ================================================
+
+paths:
+  data_dir: "data/tft_ready_multiseries"
+  model_dir: "checkpoints_tft"
+
+data:
+  target: "close"
+  time_idx: "time_idx"
+  group_id: "series"
+  static_categoricals: ["series", "sector_id"]
+
+  # time-varying forward-known features
+  known_future_reals: ["time_idx"]
+
+  # how many steps of history and forecast horizon
+  max_encoder_length: 60
+  max_prediction_length: 5
+
+training:
+  batch_size: 64
+  epochs: 50
+  seed: 42
+  num_workers: 0
+  log_every: 10
+
+model:
+  hidden_size: 8                 # small
+  hidden_continuous_size: 4
+  attention_head_size: 1
+  dropout: 0.3
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+
+optim:
+  gradient_clip_val: 0.1
+  patience: 5    # EarlyStopping
+
+system:
+  use_gpu_if_available: true

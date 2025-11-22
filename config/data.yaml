@@ -1,0 +1,156 @@
+data:
+  start_date: "2005-01-01"
+  end_date: null   # default → today
+
+  sources:
+      companies_folder: "data/raw_companies"
+      macro_folder: "data/raw_macro"
+      market_folder: "data/raw_macro_market"
+      news_folder: "data/news/raw"
+  
+  processed:
+    companies_folder: "data/processed_companies"
+    macro_folder: "data/processed_macro"
+    market_folder: "data/processed_macro_market"
+    calendar_folder: "data/processed_calendar"
+    news_sentiment_folder: "data/news/sentiment"
+    tft_ready_folder: "data/tft_ready"
+
+
+
+# -----------------------------------------------------
+# COMPANIES WITH SECTORS
+# -----------------------------------------------------
+companies:
+  tickers_with_sectors:
+      AGL.AX: "Utilities"
+      AIA.AX: "Industrials"
+      AMC.AX: "Materials"
+      AMP.AX: "Financials"
+      ANZ.AX: "Financials"
+      APA.AX: "Utilities"
+      ASX.AX: "Financials"
+      AZJ.AX: "Industrials"
+      BHP.AX: "Materials"
+      BXB.AX: "Industrials"
+      CAR.AX: "Communication Services"
+      CBA.AX: "Financials"
+      CCP.AX: "Financials"
+      COL.AX: "Consumer Staples"
+      CPU.AX: "Financials"
+      CSL.AX: "Health Care"
+      ALD.AX: "Energy"
+      DMP.AX: "Consumer Discretionary"
+      FMG.AX: "Materials"
+      GPT.AX: "Real Estate"
+      IAG.AX: "Financials"
+      JBH.AX: "Consumer Discretionary"
+      JHX.AX: "Materials"
+      LLC.AX: "Real Estate"
+      MGR.AX: "Real Estate"
+      MTS.AX: "Consumer Staples"
+      NAB.AX: "Financials"
+      NEM.AX: "Materials"
+      NSR.AX: "Real Estate"
+      ORI.AX: "Materials"
+      ORG.AX: "Utilities"
+      QAN.AX: "Industrials"
+      RHC.AX: "Health Care"
+      RIO.AX: "Materials"
+      SCG.AX: "Real Estate"
+      SEK.AX: "Communication Services"
+      SHL.AX: "Health Care"
+      S32.AX: "Materials"
+      STO.AX: "Energy"
+      SUL.AX: "Consumer Discretionary"
+      SUN.AX: "Financials"
+      TCL.AX: "Industrials"
+      TLS.AX: "Communication Services"
+      TPG.AX: "Communication Services"
+      WBC.AX: "Financials"
+      WES.AX: "Consumer Staples"
+      WDS.AX: "Energy"
+      WOW.AX: "Consumer Staples"
+      WTC.AX: "Technology"
+      XRO.AX: "Technology"
+
+
+
+# -----------------------------------------------------
+# MACRO — Global Equity & Country Indices Only
+# -----------------------------------------------------
+macro:
+  tickers:
+    - ^AXJO
+    - ^GSPC
+    - ^FTSE
+    - ^N225
+    - ^HSI
+    - 000001.SS     # SSE Composite
+    - 000300.SS     # CSI 300
+    - ^VIX          # VIX belongs to macro
+
+
+
+# -----------------------------------------------------
+# MARKET — Commodities, FX, and Dollar Index
+# -----------------------------------------------------
+market:
+  tickers:
+    - DX-Y.NYB      # use ONLY this as USD index (remove DX=F duplicate)
+    - AUDUSD=X
+    - AUDJPY=X
+    - HG=F          # Copper
+    - BZ=F          # Brent oil
+    - GC=F          # Gold
+    - CL=F          # Crude oil (WTI)
+    - SI=F          # Silver
+    - DBC           # Commodities basket ETF
+
+
+
+# -----------------------------------------------------
+# NEWS COVERAGE — aligned with macro + market
+# -----------------------------------------------------
+news:
+  tickers:
+    AXJO: "^AXJO"
+    SPY: "SPY"
+    GSPC: "^GSPC"
+    HSI: "^HSI"
+    N225: "^N225"
+    SSE: "000001.SS"
+    CSI300: "000300.SS"
+    VIX: "^VIX"
+    DXY: "DX-Y.NYB"
+    AUDUSD: "AUDUSD=X"
+    AUDJPY: "AUDJPY=X"
+    GOLD: "GC=F"
+    SILVER: "SI=F"
+    OIL: "BZ=F"
+    COPPER: "HG=F"
+    DBC: "DBC"
+
+
+
+# -----------------------------------------------------
+# CALENDAR SETTINGS
+# -----------------------------------------------------
+calendar:
+  include_aus: true
+  include_us: true
+  include_cn: true
+
+
+
+# -----------------------------------------------------
+# INDICATORS
+# -----------------------------------------------------
+indicators:
+  sma_windows: [5,10,20,50,100,200]
+  ema_windows: [5,10,20,50,100,200]
+  rsi_periods: [7,14]
+  macd:
+    fast: 12
+    slow: 26
+    signal: 9
