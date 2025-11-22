@@ -154,7 +154,7 @@ def step_invalid_columns():
 # =====================================================================
 
 def step_test_build_datasets():
-    from scripts.train_patchtst import load_config, build_datasets
+    from scripts.train import load_config, build_datasets
 
     cfg = load_config("config/train_tft.yaml")
 
@@ -174,7 +174,7 @@ def step_test_build_datasets():
 # =====================================================================
 
 def step_model_initialization():
-    from scripts.train_patchtst import load_config, build_datasets, MyTFT
+    from scripts.train import load_config, build_datasets, MyTFT
     cfg = load_config("config/train_tft.yaml")
 
     train_df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
@@ -199,7 +199,7 @@ def step_model_initialization():
 # =====================================================================
 
 def step_validate_search_config():
-    from scripts.hparam_search_patchtst import load_search_config
+    from scripts.hparam_search import load_search_config
     cfg = load_search_config()
 
     if "search_space" not in cfg:

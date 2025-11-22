@@ -1,18 +1,18 @@
 # ======================================================
-# Hyperparameter Search Grid for PatchTST (Anti-Overfitting)
+# Hyperparameter Search Grid for TFT (Anti-Overfitting)
 # ======================================================
 
 search_space:
 
   # Model capacity
-  hidden_size: [32, 64, 128]
-  patch_len: [16, 32]
-  stride: [8, 16]
-  dropout: [0.1, 0.3]
+  hidden_size: [4, 8, 16]
+  hidden_continuous_size: [2, 4, 8]
+  attention_head_size: [1]
+  dropout: [0.1, 0.3, 0.5]
 
   # Optimizer params
   learning_rate: [0.0001, 0.0003]
-  weight_decay: [0.0, 0.0001]
+  weight_decay: [0.0, 0.0001, 0.001]
 
   # Training
   batch_size: [32, 64]
@@ -20,7 +20,7 @@ search_space:
 
 
 # ------------------------------------------------------
-# Required for both train_patchtst.py and hparam_search_patchtst.py
+# Required for both train.py and hparam_search.py
 # ------------------------------------------------------
 
 data:
@@ -30,9 +30,12 @@ data:
   time_idx: "time_idx"
   group_id: "series"
 
+  # <<< THIS FIXES YOUR ERROR >>>
   static_categoricals: ["series", "sector_id"]
   known_future_reals: ["time_idx"]
 
+
+# (Optional model section — used by train.py if needed)
 model:
   static_categoricals: ["series", "sector_id"]
   known_future_reals: ["time_idx"]

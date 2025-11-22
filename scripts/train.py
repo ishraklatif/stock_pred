@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Config-driven PatchTST Training Script
---------------------------------------
+Config-driven TFT Training Script
+---------------------------------
 
-Reads hyperparameters from config/train_patchtst.yaml
-Trains a Patch Time Series Transformer (PatchTST) on ASX multiseries dataset.
+Reads hyperparameters from config/train_tft.yaml
+Trains a small, anti-overfitting TFT on ASX multiseries dataset.
 
 Features:
 - Config-driven (paths, model, training, optim, system)
-- AdamW optimizer with weight decay
+- AdamW optimizer via a custom TFT subclass
 - Robust handling of:
     * bad column names ('.' and '-' → '_')
     * non-finite values (NaN / inf) in numeric features
 - Optional DRY RUN via env var:
-    STOCKPRED_DRY_RUN=1 python -m scripts.train_patchtst
+    STOCKPRED_DRY_RUN=1 python -m scripts.train
 
-Author: Ishrak + ChatGPT (PatchTST edition)
+Author: Ishrak + ChatGPT
 """
 
 import os
@@ -28,9 +28,8 @@ import torch
 from lightning.pytorch import Trainer, seed_everything
 from lightning.pytorch.callbacks import ModelCheckpoint, EarlyStopping
 
-from pytorch_forecasting import TimeSeriesDataSet
+from pytorch_forecasting import TimeSeriesDataSet, TemporalFusionTransformer
 from pytorch_forecasting.metrics import QuantileLoss
-from pytorch_forecasting.models.patch_tst import PatchTST
 
 warnings.filterwarnings("ignore")
 
@@ -42,9 +41,30 @@ DRY_RUN = os.getenv("STOCKPRED_DRY_RUN", "0") == "1"
 
 
 # =====================================================================
+# CUSTOM OPTIMIZER (AdamW)
+# =====================================================================
+class MyTFT(TemporalFusionTransformer):
+    """
+    TFT subclass that uses AdamW with weight decay from hparams.optimizer_params.
+    """
+
+    def configure_optimizers(self):
+        lr = self.hparams.learning_rate
+        opt_params = getattr(self.hparams, "optimizer_params", {}) or {}
+        weight_decay = opt_params.get("weight_decay", 0.0)
+
+        optimizer = torch.optim.AdamW(
+            self.parameters(),
+            lr=lr,
+            weight_decay=weight_decay,
+        )
+        return optimizer
+
+
+# =====================================================================
 # CONFIG
 # =====================================================================
-def load_config(path: str = "config/train_patchtst.yaml") -> Dict[str, Any]:
+def load_config(path: str = "config/train_tft.yaml") -> Dict[str, Any]:
     import yaml
 
     with open(path, "r") as f:
@@ -68,13 +88,11 @@ def select_device(cfg: Dict[str, Any]) -> Tuple[str, int]:
 # =====================================================================
 # SANITISATION HELPERS
 # =====================================================================
-def sanitize_column_names(
-    train_df: pd.DataFrame,
-    val_df: pd.DataFrame
-) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def sanitize_column_names(train_df: pd.DataFrame,
+                          val_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
     Replace '.' and '-' in column names with '_' so that PyTorch Forecasting
-    (and PatchTST) are happy.
+    (and TFT) are happy.
     """
     rename_map = {c: c.replace(".", "_").replace("-", "_") for c in train_df.columns}
     if any(new != old for old, new in rename_map.items()):
@@ -85,10 +103,8 @@ def sanitize_column_names(
 
 
 def drop_nonfinite_rows(
-    train_df: pd.DataFrame,
-    val_df: pd.DataFrame,
-    target: str,
-    feature_cols: List[str],
+    train_df: pd.DataFrame, val_df: pd.DataFrame,
+    target: str, feature_cols: List[str]
 ) -> Tuple[pd.DataFrame, pd.DataFrame, List[str]]:
     """
     - Drop any numeric feature columns that contain NaN/inf in *either* split.
@@ -134,11 +150,9 @@ def drop_nonfinite_rows(
 # =====================================================================
 # BUILD DATASETS
 # =====================================================================
-def build_datasets(
-    cfg: Dict[str, Any],
-    train_df: pd.DataFrame,
-    val_df: pd.DataFrame
-):
+def build_datasets(cfg: Dict[str, Any],
+                   train_df: pd.DataFrame,
+                   val_df: pd.DataFrame):
     data_cfg = cfg["data"]
     target = data_cfg["target"]
     time_idx = data_cfg["time_idx"]
@@ -160,8 +174,7 @@ def build_datasets(
         data_cfg.get("static_categoricals", [])
     )
     feature_cols = [
-        c
-        for c in train_df.columns
+        c for c in train_df.columns
         if c not in ignore_cols and pd.api.types.is_numeric_dtype(train_df[c])
     ]
 
@@ -184,12 +197,16 @@ def build_datasets(
         time_idx=time_idx,
         target=target,
         group_ids=[group_id],
+
         max_encoder_length=data_cfg["max_encoder_length"],
         max_prediction_length=data_cfg["max_prediction_length"],
+
         static_categoricals=data_cfg.get("static_categoricals", []),
         static_reals=[],
+
         time_varying_known_reals=data_cfg.get("known_future_reals", [time_idx]),
         time_varying_known_categoricals=[],
+
         time_varying_unknown_reals=[target] + feature_cols,
         time_varying_unknown_categoricals=[],
     )
@@ -246,7 +263,7 @@ def main():
 
     checkpoint_cb = ModelCheckpoint(
         dirpath=model_dir,
-        filename="patchtst",
+        filename="tft",
         save_last=True,
         save_top_k=1,
         monitor="val_loss",
@@ -263,22 +280,18 @@ def main():
     # Device
     accelerator, devices = select_device(cfg)
 
-    # Model config (PatchTST)
+    # TFT kwargs
     model_cfg = cfg["model"]
-    patch_kwargs = dict(
+    tft_kwargs = dict(
         learning_rate=model_cfg["learning_rate"],
         hidden_size=model_cfg["hidden_size"],
+        hidden_continuous_size=model_cfg["hidden_continuous_size"],
+        attention_head_size=model_cfg["attention_head_size"],
         dropout=model_cfg["dropout"],
         loss=loss,
         output_size=output_size,
         optimizer="adamw",
         optimizer_params={"weight_decay": model_cfg["weight_decay"]},
-        patch_len=model_cfg["patch_len"],
-        stride=model_cfg["stride"],
-        # keep heads constant for stability
-        # if PF PatchTST exposes this, from_dataset will pass it through
-        # otherwise it's ignored and defaults are used
-        # num_heads=4,
     )
 
     # Trainer
@@ -296,18 +309,18 @@ def main():
     # Resume or start new
     if os.path.exists(ckpt_last) and not DRY_RUN:
         print(f"[INFO] Resuming from: {ckpt_last}")
-        model = PatchTST.from_dataset(training, **patch_kwargs)
+        tft = MyTFT.from_dataset(training, **tft_kwargs)
         ckpt = torch.load(ckpt_last, map_location="cpu")
-        model.load_state_dict(ckpt["state_dict"], strict=True)
+        tft.load_state_dict(ckpt["state_dict"], strict=True)
     else:
         if DRY_RUN:
             print("[INFO] DRY RUN mode → always starting fresh model.")
         else:
-            print("[INFO] Starting new PatchTST training run...")
-        model = PatchTST.from_dataset(training, **patch_kwargs)
+            print("[INFO] Starting new training run...")
+        tft = MyTFT.from_dataset(training, **tft_kwargs)
 
     # Fit
-    trainer.fit(model, train_loader, val_loader)
+    trainer.fit(tft, train_loader, val_loader)
 
     if not DRY_RUN:
         trainer.save_checkpoint(ckpt_last)

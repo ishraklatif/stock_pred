@@ -1,10 +1,10 @@
-# ================================================
-# TRAINING CONFIG FOR MULTISERIES PatchTST
+================================================
+# TRAINING CONFIG FOR MULTISERIES TFT (ANTI-OVERFITTING)
 # ================================================
 
 paths:
   data_dir: "data/tft_ready_multiseries"
-  model_dir: "checkpoints_patchtst"
+  model_dir: "checkpoints_tft"
 
 data:
   target: "close"
@@ -15,7 +15,7 @@ data:
   # time-varying forward-known features
   known_future_reals: ["time_idx"]
 
-  # history length and forecast horizon
+  # how many steps of history and forecast horizon
   max_encoder_length: 60
   max_prediction_length: 5
 
@@ -27,15 +27,12 @@ training:
   log_every: 10
 
 model:
-  # PatchTST (Option A - small & stable)
-  hidden_size: 64
+  hidden_size: 8                 # small
+  hidden_continuous_size: 4
+  attention_head_size: 1
   dropout: 0.3
   learning_rate: 0.0003
   weight_decay: 0.0001
-
-  # patching params
-  patch_len: 32
-  stride: 16
 
 optim:
   gradient_clip_val: 0.1
