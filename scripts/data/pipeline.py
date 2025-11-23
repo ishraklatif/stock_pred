@@ -13,26 +13,26 @@ Stages (in order):
    - fetch_macro_news.py     → data/news/raw
 
 2. CLEAN
-   - clean_company.py        → cleaned companies (if you keep a cleaned layer)
-   - clean_market.py         → cleaned macro/market (if used)
-   - clean_macro.py          → cleaned global macro (if used)
-
-   (If your current design cleans at raw-level, adapt these calls accordingly,
-    or comment them out.)
+   - company_clean.py        → cleaned companies
+   - macro_clean.py          → cleaned global macro
+   - market_clean.py         → cleaned macro/market
 
 3. COMPUTE
-   - compute_indicators.py       → data/processed_*
-   - compute_calendar_features.py→ data/processed_calendar/calendar_master.parquet
-   - compute_news_sentiment.py   → data/news/sentiment
+   - compute_indicators.py        → data/processed_*
+   - compute_calendar_features.py → data/processed_calendar/calendar_master.parquet
+   - compute_news_sentiment.py    → data/news/sentiment
 
 4. MERGE
-   - merge_all_features.py       → data/tft_ready/<TICKER>.parquet
+   - merge_all_features.py        → data/tft_ready/<TICKER>.parquet
 """
-import sys, os
+
+import sys
+import os
+import argparse
+
+# Ensure repo root on path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
-
-import argparse
 
 
 # =========================================================
@@ -96,7 +96,7 @@ def run_compute():
 # =========================================================
 def run_merge():
     try:
-        from scripts.data.merge.merge_all_data import main as merge_main
+        from scripts.data.merge.merge_all_features import main as merge_main
     except ImportError as e:
         print(f"[WARN] MERGE script not found: {e}")
         return

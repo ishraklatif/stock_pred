@@ -2,11 +2,14 @@
 """
 clean_market.py
 
-Cleans all macro-market datasets:
-- ensures 'date' column
-- drop object columns
-- prune NaN-heavy columns
-- fill NaN
+Minimal safe cleaning for macro-market data (commodities, FX, DXY).
+
+Rules:
+- Keep NaN (market closed days)
+- DO NOT fill or drop NaN
+- Drop duplicate dates
+- Ensure numeric dtype
+- Preserve original OHLCV structure exactly
 """
 
 import os
@@ -27,20 +30,19 @@ def clean_frame(df: pd.DataFrame) -> pd.DataFrame:
     if "date" not in df.columns:
         raise RuntimeError("No 'date' column found in macro-market frame.")
 
-    df["date"] = pd.to_datetime(df["date"])
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df = df.dropna(subset=["date"]).sort_values("date")
+    df = df.drop_duplicates(subset=["date"], keep="first")
 
+    # Drop object columns if any
     obj_cols = df.select_dtypes(include=["object"]).columns
+    obj_cols = [c for c in obj_cols if c != "date"]
     df = df.drop(columns=obj_cols)
 
-    df = df.dropna(axis=1, thresh=int(len(df) * 0.50))
-    df = df.dropna(axis=0, thresh=int(df.shape[1] * 0.70))
-
-    df = df.ffill().bfill()
-
+    # Convert numeric
     for col in df.columns:
         if col != "date":
-            df[col] = df[col].astype("float32")
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("float32")
 
     return df
 
@@ -56,12 +58,9 @@ def main():
     print(f"[INFO] Found {len(files)} market raw files.")
 
     for f in files:
-        fpath = os.path.join(raw_dir, f)
-        df = pd.read_parquet(fpath)
-        df = clean_frame(df)
-        out_path = os.path.join(out_dir, f)
-        df.to_parquet(out_path, index=False)
-        print(f"[OK] Cleaned → {out_path}")
+        df = clean_frame(pd.read_parquet(os.path.join(raw_dir, f)))
+        df.to_parquet(os.path.join(out_dir, f), index=False)
+        print(f"[OK] Cleaned → {os.path.join(out_dir, f)}")
 
     print("\n[COMPLETE] clean_market.py finished.\n")
 

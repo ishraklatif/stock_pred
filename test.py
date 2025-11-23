@@ -87,25 +87,27 @@
 # print(df[df["close"].isna()].head())
 # print(df.groupby("series")["close"].apply(lambda x: x.isna().sum()).sort_values(ascending=False).head(20))
 
-# import pandas as pd
-
-# df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
-
-# missing = df[df["sector_id"] == "Unknown"]["series"].unique()
-# print("Companies without sector_id:")
-# for s in missing:
-#     print(" -", s)
-
 import pandas as pd
 
-df_train = pd.read_parquet("data/tft_reduced/train.parquet")
-df_val = pd.read_parquet("data/tft_reduced/val.parquet")
-df_test = pd.read_parquet("data/tft_reduced/test.parquet")
+df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
 
-columns = sorted(df_train.columns)
+missing = df[df["sector_id"] == "Unknown"]["series"].unique()
+print("Companies without sector_id:")
+for s in missing:
+    print(" -", s)
 
-with open("all_features.txt", "w") as f:
-    for c in columns:
-        f.write(c + "\n")
+# import pandas as pd
 
-print("Saved all feature names to all_features.txt")
+# df_train = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
+
+
+# print("\nTrain columns:")
+# print(df_train.columns.tolist())
+
+import pandas as pd
+df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
+len([c for c in df.columns if c not in ["Date", "series", "sector_id", "time_idx", "close"]])
+
+
+
+

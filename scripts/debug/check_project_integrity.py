@@ -17,6 +17,13 @@ import traceback
 import pandas as pd
 import yaml
 import numpy as np
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+PARENT = os.path.abspath(os.path.join(PROJECT_ROOT, ".."))
+
+for p in [PROJECT_ROOT, PARENT]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
 
 # Add project root so scripts/ becomes importable
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -160,7 +167,7 @@ def step_invalid_columns():
 # =====================================================================
 
 def step_test_build_datasets():
-    from scripts.train import load_config, build_datasets
+    from scripts.training.train import load_config, build_datasets
 
     cfg = load_config("config/train_tft.yaml")
 
@@ -180,7 +187,7 @@ def step_test_build_datasets():
 # =====================================================================
 
 def step_model_initialization():
-    from scripts.train import load_config, build_datasets, MyTFT
+    from scripts.training.train import load_config, build_datasets, MyTFT
     cfg = load_config("config/train_tft.yaml")
 
     train_df = pd.read_parquet("data/tft_ready_multiseries/train.parquet")
@@ -205,7 +212,7 @@ def step_model_initialization():
 # =====================================================================
 
 def step_validate_search_config():
-    from scripts.hparam_search import load_search_config
+    from scripts.training.hparam_search import load_search_config
     search_space, data_cfg = load_search_config()
 
     if not isinstance(search_space, dict):

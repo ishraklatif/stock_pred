@@ -2,8 +2,8 @@
 """
 fetch_company.py
 
-Fetches historical OHLCV for all ASX company tickers defined in config/data.yaml.
-Uses canonical yfinance cleaning logic.
+Fetches company OHLCV data using yfinance.
+Saves files using safe canonical names (AGL_AX.parquet).
 """
 
 import os
@@ -12,78 +12,53 @@ import yaml
 import yfinance as yf
 import pandas as pd
 
+from scripts.data.fetch.canonical_map import safe_filename
+
 CONFIG_PATH = "config/data.yaml"
 
 
-# ---------------------------------------------------------
-# Load config
-# ---------------------------------------------------------
 def load_config(path=CONFIG_PATH):
     with open(path, "r") as f:
         return yaml.safe_load(f)
 
 
-# ---------------------------------------------------------
-# Canonical OHLCV cleaner
-# ---------------------------------------------------------
 def clean_yf(df):
     if df is None or df.empty:
         return pd.DataFrame()
 
     df = df.reset_index()
 
-    # flatten possible MultiIndex
-    flat = []
-    for col in df.columns:
-        if isinstance(col, tuple):
-            col = col[0]
-        flat.append(str(col).lower().replace(" ", "_"))
-    df.columns = flat
+    # Flatten multi-index columns
+    cols = []
+    for c in df.columns:
+        if isinstance(c, tuple):
+            c = c[0]
+        cols.append(str(c).lower().replace(" ", "_"))
 
-    if "date" not in df.columns:
-        raise RuntimeError("No 'date' column found after flattening yfinance frame.")
+    df.columns = cols
 
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df["date"] = pd.to_datetime(df["date"])
     df = df.dropna(subset=["date"]).sort_values("date")
 
     keep = ["date", "open", "high", "low", "close", "adj_close", "volume"]
-    df = df[[c for c in keep if c in df.columns]]
-
-    return df
+    return df[[c for c in keep if c in df.columns]]
 
 
-# ---------------------------------------------------------
-# Fetch a company
-# ---------------------------------------------------------
-def fetch_company(ticker, start, end):
-    print(f"[INFO] Fetching {ticker} ...")
-    try:
-        df = yf.download(
-            ticker,
-            start=start,
-            end=end,
-            auto_adjust=False,
-            progress=False
-        )
-    except Exception as e:
-        print(f"[ERROR] yfinance error for {ticker}: {e}")
+def fetch_one(symbol, start, end):
+    print(f"[INFO] Fetching {symbol} ...")
+    df = yf.download(symbol, start=start, end=end, progress=False)
+
+    if df.empty:
+        print(f"[WARN] No data: {symbol}")
         return None
 
-    if df is None or df.empty:
-        print(f"[WARN] No data for {ticker}")
-        return None
-
-    df = clean_yf(df)
-    return df
+    return clean_yf(df)
 
 
-# ---------------------------------------------------------
-# Main
-# ---------------------------------------------------------
 def main():
     cfg = load_config()
+    companies = cfg["companies"]["tickers_with_sectors"]
 
-    tickers = list(cfg["companies"]["tickers_with_sectors"].keys())
     start = cfg["data"]["start_date"]
     end = cfg["data"]["end_date"] or datetime.today().strftime("%Y-%m-%d")
 
@@ -92,14 +67,16 @@ def main():
 
     print(f"[INFO] Saving to → {out_dir}")
 
-    for ticker in tickers:
-        df = fetch_company(ticker, start, end)
+    for symbol in companies.keys():
+        df = fetch_one(symbol, start, end)
         if df is None or df.empty:
             continue
 
-        path = f"{out_dir}/{ticker}.parquet"
-        df.to_parquet(path, index=False)
-        print(f"[OK] Saved {path}")
+        safe = safe_filename(symbol)
+        out = os.path.join(out_dir, f"{safe}.parquet")
+
+        df.to_parquet(out, index=False)
+        print(f"[OK] Saved {out}")
 
     print("\n[COMPLETE] Company fetch finished.\n")
 

@@ -6,6 +6,7 @@ paths:
   data_dir: "data/tft_ready_multiseries"
   model_dir: "checkpoints_tft"
 
+
 data:
   target: "close"
   time_idx: "time_idx"

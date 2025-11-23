@@ -2,7 +2,14 @@
 """
 clean_macro.py
 
-Cleans global macro index datasets.
+Minimal safe cleaning for macro index OHLCV data.
+
+Rules:
+- Never forward-fill or backward-fill macro values
+- Keep NaN (market holidays cross-country alignment)
+- Drop duplicate dates only
+- Ensure numeric dtype
+- DO NOT drop rows due to NaN
 """
 
 import os
@@ -23,20 +30,24 @@ def clean_frame(df: pd.DataFrame) -> pd.DataFrame:
     if "date" not in df.columns:
         raise RuntimeError("No 'date' column found in macro frame.")
 
-    df["date"] = pd.to_datetime(df["date"])
+    # Clean date column
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df = df.dropna(subset=["date"]).sort_values("date")
 
-    df = df.drop(columns=df.select_dtypes(include=["object"]).columns)
+    # Drop duplicate dates
+    df = df.drop_duplicates(subset=["date"], keep="first")
 
-    df = df.dropna(axis=1, thresh=int(len(df) * 0.50))
-    df = df.dropna(axis=0, thresh=int(df.shape[1] * 0.70))
+    # Drop object columns (rare)
+    obj_cols = df.select_dtypes(include=["object"]).columns
+    obj_cols = [c for c in obj_cols if c != "date"]
+    df = df.drop(columns=obj_cols)
 
-    df = df.ffill().bfill()
-
+    # Cast numeric
     for col in df.columns:
         if col != "date":
-            df[col] = df[col].astype("float32")
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("float32")
 
+    # Keep NaN — DO NOT ffill/bfill
     return df
 
 
@@ -45,19 +56,15 @@ def main():
 
     raw_dir = cfg["data"]["sources"]["macro_folder"]
     out_dir = cfg["data"]["processed"]["macro_folder"]
-
     os.makedirs(out_dir, exist_ok=True)
 
     files = [f for f in os.listdir(raw_dir) if f.endswith(".parquet")]
     print(f"[INFO] Found {len(files)} macro raw files.")
 
     for f in files:
-        fpath = os.path.join(raw_dir, f)
-        df = pd.read_parquet(fpath)
-        df = clean_frame(df)
-        out_path = os.path.join(out_dir, f)
-        df.to_parquet(out_path, index=False)
-        print(f"[OK] Cleaned → {out_path}")
+        df = clean_frame(pd.read_parquet(os.path.join(raw_dir, f)))
+        df.to_parquet(os.path.join(out_dir, f), index=False)
+        print(f"[OK] Cleaned → {os.path.join(out_dir, f)}")
 
     print("\n[COMPLETE] clean_macro.py finished.\n")
 

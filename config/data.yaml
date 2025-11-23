@@ -1,3 +1,6 @@
+# =====================================================
+# DATA CONFIGURATION
+# =====================================================
 data:
   start_date: "2005-01-01"
   end_date: null   # default → today
@@ -7,20 +10,19 @@ data:
       macro_folder: "data/raw_macro"
       market_folder: "data/raw_macro_market"
       news_folder: "data/news/raw"
-  
+
   processed:
-    companies_folder: "data/processed_companies"
-    macro_folder: "data/processed_macro"
-    market_folder: "data/processed_macro_market"
-    calendar_folder: "data/processed_calendar"
-    news_sentiment_folder: "data/news/sentiment"
-    tft_ready_folder: "data/tft_ready"
+      companies_folder: "data/processed_companies"
+      macro_folder: "data/processed_macro"
+      market_folder: "data/processed_macro_market"
+      calendar_folder: "data/processed_calendar"
+      news_sentiment_folder: "data/news/sentiment"
+      tft_ready_folder: "data/tft_ready"
 
 
-
-# -----------------------------------------------------
-# COMPANIES WITH SECTORS
-# -----------------------------------------------------
+# =====================================================
+# COMPANY METADATA
+# =====================================================
 companies:
   tickers_with_sectors:
       AGL.AX: "Utilities"
@@ -75,7 +77,6 @@ companies:
       XRO.AX: "Technology"
 
 
-
 # -----------------------------------------------------
 # MACRO — Global Equity & Country Indices Only
 # -----------------------------------------------------
@@ -86,10 +87,9 @@ macro:
     - ^FTSE
     - ^N225
     - ^HSI
-    - 000001.SS     # SSE Composite
-    - 000300.SS     # CSI 300
-    - ^VIX          # VIX belongs to macro
-
+    - 000001.SS
+    - 000300.SS
+    - ^VIX
 
 
 # -----------------------------------------------------
@@ -97,20 +97,19 @@ macro:
 # -----------------------------------------------------
 market:
   tickers:
-    - DX-Y.NYB      # use ONLY this as USD index (remove DX=F duplicate)
+    - DX-Y.NYB
     - AUDUSD=X
     - AUDJPY=X
-    - HG=F          # Copper
-    - BZ=F          # Brent oil
-    - GC=F          # Gold
-    - CL=F          # Crude oil (WTI)
-    - SI=F          # Silver
-    - DBC           # Commodities basket ETF
-
+    - HG=F
+    - BZ=F
+    - GC=F
+    - CL=F
+    - SI=F
+    - DBC
 
 
 # -----------------------------------------------------
-# NEWS COVERAGE — aligned with macro + market
+# NEWS SENTIMENT — aligned with macro & market assets
 # -----------------------------------------------------
 news:
   tickers:
@@ -132,7 +131,6 @@ news:
     DBC: "DBC"
 
 
-
 # -----------------------------------------------------
 # CALENDAR SETTINGS
 # -----------------------------------------------------
@@ -142,15 +140,30 @@ calendar:
   include_cn: true
 
 
-
 # -----------------------------------------------------
-# INDICATORS
+# INDICATORS (MINIMAL SET)
 # -----------------------------------------------------
 indicators:
-  sma_windows: [5,10,20,50,100,200]
-  ema_windows: [5,10,20,50,100,200]
-  rsi_periods: [7,14]
+
+  # RSI
+  rsi_periods: [14]          # only rsi_14
+
+  # Bollinger
+  bollinger:
+    window: 20
+    num_std: 2
+
+  # OBV enabled by presence of "volume" column
+  obv: true
+
+  # These are now removed from compute_indicators
+  # but kept here if you want to add later
+  ema_windows: []
   macd:
-    fast: 12
-    slow: 26
-    signal: 9
+    fast: null
+    slow: null
+    signal: null
+
+  # No realized vol or ret windows anymore
+  realized_vol_windows: []
+  return_windows: []
