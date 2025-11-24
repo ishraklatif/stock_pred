@@ -1,24 +1,35 @@
 # ======================================================
-# Hyperparameter Search Grid for TFT (Anti-Overfitting)
+# Hyperparameter Search Grid for TFT
 # ======================================================
 
 search_space:
 
-  # Model capacity
-  hidden_size: [4, 8, 16]
-  hidden_continuous_size: [2, 4, 8]
-  attention_head_size: [1]
-  dropout: [0.1, 0.3, 0.5]
+  # -----------------------------
+  # Model capacity (fixed)
+  # -----------------------------
+  hidden_size: [8]                   # stable, fast, good capacity
+  hidden_continuous_size: [4]        # ideal for 500+ numeric features
+  attention_head_size: [1]           # MUST stay 1 for stability/performance
+  dropout: [0.1, 0.3]                # reduced to avoid overfitting
+                                      # 0.5 removed (hurts small models)
 
+  # -----------------------------
   # Optimizer
-  learning_rate: [0.0001, 0.0003]
-  weight_decay: [0.0, 0.0001, 0.001]
+  # -----------------------------
+  learning_rate: [0.0001, 0.0003]    # low-learning-rate works best for TFT
+  weight_decay: [0.0, 0.0001]        # remove 0.001 (too strong for TS)
+                                      # prevents over-regularizing
 
+  # -----------------------------
   # Training parameters
-  batch_size: [32, 64]
-  max_epochs: [20]
+  # -----------------------------
+  batch_size: [32, 64]               # stable
+  max_epochs: [5]                    # IMPORTANT: initial 10-epoch search
+                                    
 
-# Data (must remain at top-level but below search_space)
+# ======================================================
+# Data (unchanged)
+# ======================================================
 data:
   max_encoder_length: 60
   max_prediction_length: 5
