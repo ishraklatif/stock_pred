@@ -96,7 +96,43 @@ TFT combines recurrent layers, attention mechanisms, gating, and feature selecti
                      │    Quantile Forecast Outputs      │
                      └──────────────────────────────────┘
 ```
+### 📐 Data flow
+---
 
+────────── train.parquet ──────────
+      ↓ grouped by [series]
+      ↓ sorted by [time_idx]
+      ↓ rolling windows (60 past, 5 future)
+────────────────────────────────────
+
+┌─────────────────────────────────────┐
+│      ENCODER (60 past steps)        │
+├─────────────────────────────────────┤
+│ encoder_cat      → [B,60,2]         │ series, sector                         (categorical)
+│ encoder_cont     → [B,60,249]       │ OHLCV + macro + sentiment + calendars  (continuous)
+│ encoder_target   → [B,60]           │ past close                             (target history)
+└─────────────────────────────────────┘
+
+      ↓ LSTM encoder
+      ↓ Variable selection network
+      ↓ Multi-head attention
+
+┌─────────────────────────────────────┐
+│      DECODER (5 future steps)       │
+├─────────────────────────────────────┤
+│ decoder_cat      → [B,5,2]          │ same categoricals
+│ decoder_cont     → [B,5,249]        │ future-known features only
+│ decoder_target   → [B,5]            │ FUTURE close to predict
+│ decoder_time_idx → [B,5]            │ future positions
+└─────────────────────────────────────┘
+
+      ↓ Attention between encoder & decoder
+      ↓ Gated residual connections
+
+┌─────────────────────────────────────┐
+│           OUTPUT LAYER              │
+└─────────────────────────────────────┘
+      ↓ predict 5-step close
 ---
 
 # 📁 Project Structure
@@ -345,6 +381,7 @@ python scripts/evaluate_tft.py
 !git clone https://github.com/<your_repo>/stock_pred.git
 %cd stock_pred
 !pip install pytorch-forecasting pytorch-lightning torch pandas numpy
+!python scripts/pipeline.py
 !python scripts/prepare_data_tft.py
 !python scripts/train.py
 !python scripts/evaluate_tft.py
