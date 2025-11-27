@@ -49,6 +49,9 @@ CANONICAL_MAP: Dict[str, str] = {
 
     "000001.SS": "SSE",
     "000300.SS": "CSI300",
+    "^SSE":      "SSE",
+    "^CSI300":   "CSI300",
+
 
     # -----------------------
     # Dollar Index
@@ -104,6 +107,100 @@ CANONICAL_MAP: Dict[str, str] = {
 
     # Broad commodities ETF / index
     "DBC":      "DBC",
+
+    # ---------------------------------------------------------------------
+    # Additional mappings for robustness
+    # ---------------------------------------------------------------------
+
+    # SPY variants
+    "SPY": "SPY",
+    "SPY?P=SPY": "SPY",
+
+    # DBC variants
+    "DBC=X": "DBC",
+    "DBC?P=DBC": "DBC",
+# NOTE:
+# SSE and CSI300 mappings intentionally allow both with and without ".SS" extension.
+# This is safe because canonical_name() reduces duplicates at save-time.
+
+    # China index alternates (SSE / CSI300)
+    "SSE": "SSE",
+    "CSI300": "CSI300",
+    "000001": "SSE",
+    "000300": "CSI300",
+
+    # Lowercase sector ETF variants
+    "xlf": "XLF",
+    "xlk": "XLK",
+    "xli": "XLI",
+    "xle": "XLE",
+    "xlv": "XLV",
+    "xlu": "XLU",
+    "xlb": "XLB",
+    "xlp": "XLP",
+    "xly": "XLY",
+    "xlre": "XLRE",
+    "xlc": "XLC",
+
+
+    # -----------------------
+    # SPX alternates
+    # -----------------------
+    "^SPX": "GSPC",
+    "SPX": "GSPC",
+
+    # -----------------------
+    # Futures alternates
+    # -----------------------
+    "ES=F": "GSPC",   # S&P 500 futures
+    "VX=F": "VIX",    # VIX futures
+
+    "ES": "GSPC",     # S&P500 futures (alternate code)
+    "^ES": "GSPC",
+    "VX": "VIX",      # VIX futures
+    "^VX": "VIX",
+    "DX-Y": "DXY",
+    "DX-Y?P=DX-Y.NYB": "DXY",
+
+   
+
+    
+    # =========================================================
+    # ABS (Australian Bureau of Statistics) series IDs
+    # =========================================================
+    "A2325846C": "ABS_CPI",       # CPI All Groups
+    "A84423029T": "ABS_UNEMP",    # Unemployment rate
+    "A2304657V": "ABS_GDP",       # GDP chain volume
+
+    "a2325846c": "ABS_CPI",
+    "a84423029t": "ABS_UNEMP",
+    "a2304657v": "ABS_GDP",
+
+    # =========================================================
+    # RBA (Reserve Bank of Australia) series IDs
+    # =========================================================
+    "FIRMMCRTD": "RBA_CASH_RATE",     # Cash rate target
+    "Y10D": "RBA_YIELD_10Y",          # 10-year AU bond
+    "Y2D": "RBA_YIELD_2Y",            # 2-year AU bond
+
+    "firmmcrtd": "RBA_CASH_RATE",
+    "y10d": "RBA_YIELD_10Y",
+    "y2d": "RBA_YIELD_2Y",
+
+    "^AU10Y": "RBA_YIELD_10Y",
+    "AU10Y": "RBA_YIELD_10Y",
+    "^AU2Y": "RBA_YIELD_2Y",
+    "AU2Y": "RBA_YIELD_2Y",
+
+    "2325846C": "ABS_CPI",
+    "84423029T": "ABS_UNEMP",
+    "2304657V": "ABS_GDP",
+
+
+
+
+
+
 }
 
 
@@ -130,29 +227,47 @@ def safe_filename(name: str) -> str:
 
 def canonical_name(symbol_or_alias: str) -> str:
     """
-    Given a raw Yahoo symbol or an alias, return a canonical instrument name.
+    Given a raw Yahoo symbol or macro series ID, return a canonical instrument name.
 
-    Logic:
-    1) Exact match in CANONICAL_MAP
-    2) Uppercase match in CANONICAL_MAP
-    3) Fallback: sanitized symbol used as canonical
+    Rules:
+      - ABS/RBA/FRED macro series (uppercase alphanumeric >= 6 chars) are returned unchanged.
+      - Yahoo tickers are canonicalized using CANONICAL_MAP.
+      - Otherwise fallback to safe_filename().
     """
+
     if symbol_or_alias is None:
         raise ValueError("symbol_or_alias cannot be None")
 
     s = symbol_or_alias.strip()
+    u = s.upper()
 
-    # Direct lookup
+    # --------------------------------------------------------
+    # 1. Protect macro series (ABS, RBA, FRED)
+    #    e.g., CPIAUCSL, GDPC1, PCUOMFGOMFG, A2325846C, FIRMMCRTD
+    # --------------------------------------------------------
+    if (
+        u.isalnum()              # alphanumeric only
+        and len(u) >= 6          # macro series are long
+        and "." not in u         # not Yahoo tickers like 000001.SS
+        and "/" not in u
+        and "=" not in u
+    ):
+        return u   # Return as-is, uppercase normalized
+
+    # --------------------------------------------------------
+    # 2. Direct canonical map lookup
+    # --------------------------------------------------------
     if s in CANONICAL_MAP:
         return CANONICAL_MAP[s]
 
-    # Uppercase lookup as backup (handles e.g. 'gold' → 'GOLD' if present)
-    u = s.upper()
     if u in CANONICAL_MAP:
         return CANONICAL_MAP[u]
 
-    # Fallback: just tidy the original
+    # --------------------------------------------------------
+    # 3. Fallback: safe filename for all other tickers
+    # --------------------------------------------------------
     return safe_filename(s)
+
 
 
 def group_by_canonical(symbols: List[str]) -> Dict[str, List[str]]:

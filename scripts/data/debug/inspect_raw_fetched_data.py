@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """
-inspect_raw_fetched_data.py
+inspect_raw_fetched_data.py — UNIVERSAL VERSION
 
-Diagnostic tool to inspect raw fetched data (before clean/compute/merge).
-Useful to identify:
-- Duplicate assets before merging
-- Multiple alternate symbols mapping to the same canonical
-- Conflicting OHLCV data across alternates
-- Identical data duplicates (safe to drop)
-- Empty / malformed raw files
+Inspects ALL raw fetched data files before cleaning/merging.
 
-Works entirely on RAW FILES:
-    data/raw_macro/
-    data/raw_macro_market/
-    data/news/raw/
+Covers:
+- data/raw_macro              (Yahoo global indices)
+- data/raw_macro_market       (Yahoo commodities/FX)
+- data/raw_fred               (US macro from FRED)
+- data/raw_rba                (AU macro RBA tables)
+- data/raw_sector             (Sector ETFs)
+- data/raw_companies          (company OHLCV)
+- data/raw_abs                (ABS future)
+- data/news/raw               (news JSON)
 
-Run:
-    python scripts/debug/inspect_raw_fetched_data.py
+This script:
+- Detects empty/malformed files
+- Compares alternates under canonical_map
+- Describes columns, shape, date range
+- Works for both OHLCV and macro CSV/Parquet
 """
 
 import os
@@ -24,7 +26,6 @@ import json
 import pandas as pd
 import sys
 
-# Add project root so "scripts" becomes importable
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 sys.path.append(ROOT)
 
@@ -34,23 +35,40 @@ from scripts.data.fetch.canonical_map import (
     group_by_canonical,
 )
 
+# RAW FOLDERS
+RAW_FOLDERS = {
+    "MACRO (Yahoo indices)": "data/raw_macro",
+    "MARKET (Yahoo FX/Commodities)": "data/raw_macro_market",
+    "FRED (US macro)": "data/raw_fred",
+    "RBA (AU rates & yields)": "data/raw_rba",
+    "SECTOR ETFs": "data/raw_sector",
+    "COMPANIES": "data/raw_companies",
+    "ABS (future)": "data/raw_abs",
+}
 
 
-RAW_MACRO = "data/raw_macro"
-RAW_MARKET = "data/raw_macro_market"
-RAW_NEWS = "data/news/raw"
+NEWS_FOLDER = "data/news/raw"
 
 
-def load_parquet(path):
+# -------------------------------------------------------------------
+# HELPERS
+# -------------------------------------------------------------------
+def load_file(path):
+    """Load either parquet or CSV."""
     try:
-        return pd.read_parquet(path)
+        if path.endswith(".parquet"):
+            return pd.read_parquet(path)
+        elif path.endswith(".csv"):
+            return pd.read_csv(path)
+        else:
+            return None
     except Exception as e:
         print(f"[ERROR] Could not load {path}: {e}")
         return None
 
 
 def compare_dfs(df1, df2):
-    """Check if two OHLCV dataframes are identical."""
+    """Check if two OHLCV or macro dataframes are identical."""
     if df1 is None or df2 is None:
         return False
     if list(df1.columns) != list(df2.columns):
@@ -60,96 +78,121 @@ def compare_dfs(df1, df2):
     return df1.reset_index(drop=True).equals(df2.reset_index(drop=True))
 
 
-def inspect_folder(folder_name):
-    print("\n====================================================")
-    print(f" RAW FOLDER INSPECTION: {folder_name}")
-    print("====================================================")
+def describe_df(df):
+    """Print basic info about a dataframe."""
+    if df is None or df.empty:
+        return "EMPTY"
 
-    files = [f for f in os.listdir(folder_name) if f.endswith(".parquet")]
-    if not files:
-        print("[WARN] No files found.")
+    info = f"rows={len(df)}, cols={list(df.columns)}"
+    # try date range
+    if "date" in df.columns:
+        try:
+            d1 = str(df['date'].min())[:10]
+            d2 = str(df['date'].max())[:10]
+            info += f", date_range={d1} → {d2}"
+        except:
+            pass
+    return info
+
+
+# -------------------------------------------------------------------
+# INSPECTION LOGIC
+# -------------------------------------------------------------------
+def inspect_folder(name, folder_path):
+    print("\n" + "=" * 80)
+    print(f" INSPECTING: {name}")
+    print("=" * 80)
+
+    if not os.path.exists(folder_path):
+        print(f"[WARN] Folder missing: {folder_path}")
         return
 
-    symbol_to_path = {}
-    for f in files:
-        raw_symbol = os.path.splitext(f)[0]  # filename without extension
-        symbol_to_path[raw_symbol] = os.path.join(folder_name, f)
+    files = [f for f in os.listdir(folder_path)
+             if f.endswith(".parquet") or f.endswith(".csv")]
 
-    # Group by canonical name
-    grouped = group_by_canonical(symbol_to_path.keys())
+    if not files:
+        print("[WARN] No data files found.")
+        return
 
-    # For each canonical instrument, load and inspect all alternates
-    for canon, raw_symbols in grouped.items():
+    # Map raw file symbol → path
+    symbol_paths = {
+        os.path.splitext(f)[0]: os.path.join(folder_path, f)
+        for f in files
+    }
+
+    # Group by canonical
+    grouped = group_by_canonical(symbol_paths.keys())
+
+    for canon, raw_syms in grouped.items():
         print(f"\n--- CANONICAL: {canon} ---")
-        print(f"Raw symbols: {raw_symbols}")
+        print("Raw symbols:", raw_syms)
 
         dfs = {}
-        for sym in raw_symbols:
-            path = symbol_to_path.get(sym)
-            if path is None:
-                print(f"  [SKIP] No file for symbol {sym}")
+
+        # Load each raw file
+        for sym in raw_syms:
+            path = symbol_paths.get(sym)
+            if not path:
+                print(f"  [SKIP] Missing file for symbol {sym}")
                 continue
 
-            df = load_parquet(path)
-            if df is None or df.empty:
-                print(f"  [WARN] EMPTY or invalid data: {path}")
+            df = load_file(path)
             dfs[sym] = df
 
-            # Basic shape / column checks
-            if df is not None:
-                print(f"  [{sym}] shape={df.shape}, columns={list(df.columns)}")
+            if df is None or df.empty:
+                print(f"  [{sym}] EMPTY / invalid → {path}")
+            else:
+                print(f"  [{sym}] {describe_df(df)}")
 
-        # Compare alternates internally
+        # Compare alternates
         syms = list(dfs.keys())
         if len(syms) > 1:
             for i in range(len(syms)):
                 for j in range(i + 1, len(syms)):
                     s1, s2 = syms[i], syms[j]
                     same = compare_dfs(dfs[s1], dfs[s2])
-                    if same:
-                        print(f"    [OK] {s1} == {s2} (identical datasets)")
-                    else:
-                        print(f"    [DIFF] {s1} != {s2} (different data!)")
+                    tag = "IDENTICAL" if same else "DIFFERENT"
+                    print(f"    [{tag}] {s1} vs {s2}")
 
 
 def inspect_news():
-    print("\n====================================================")
-    print(" RAW NEWS INSPECTION ")
-    print("====================================================")
+    print("\n" + "=" * 80)
+    print(" INSPECTING: NEWS RAW JSON")
+    print("=" * 80)
 
-    if not os.path.exists(RAW_NEWS):
-        print("[WARN] news folder does not exist")
+    if not os.path.exists(NEWS_FOLDER):
+        print("[WARN] news folder missing.")
         return
 
-    files = [f for f in os.listdir(RAW_NEWS) if f.endswith(".json")]
+    files = [f for f in os.listdir(NEWS_FOLDER) if f.endswith(".json")]
     if not files:
-        print("[WARN] No news JSON files found.")
+        print("[WARN] No news files.")
         return
 
     for f in files:
-        fpath = os.path.join(RAW_NEWS, f)
-        canon = os.path.splitext(f)[0]
-
+        path = os.path.join(NEWS_FOLDER, f)
         try:
-            with open(fpath, "r") as fp:
+            with open(path, "r") as fp:
                 data = json.load(fp)
+            print(f"[{f}] count={len(data)}")
         except Exception as e:
-            print(f"[ERROR] Could not load {fpath}: {e}")
-            continue
-
-        print(f"[{canon}] news_count={len(data)}")
+            print(f"[ERROR] {f}: {e}")
 
 
+# -------------------------------------------------------------------
+# MAIN
+# -------------------------------------------------------------------
 def main():
-    inspect_folder(RAW_MACRO)
-    inspect_folder(RAW_MARKET)
+    for name, folder in RAW_FOLDERS.items():
+        inspect_folder(name, folder)
+
     inspect_news()
 
-    print("\n====================================================")
+    print("\n" + "=" * 80)
     print(" RAW FETCH INSPECTION COMPLETE ")
-    print("====================================================")
+    print("=" * 80)
 
 
 if __name__ == "__main__":
     main()
-
+# python3 -m scripts.data.debug.inspect_raw_fetched_data

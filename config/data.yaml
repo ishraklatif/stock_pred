@@ -1,23 +1,66 @@
 # =====================================================
 # DATA CONFIGURATION
 # =====================================================
+# ABS/RBA series are NOT Yahoo tickers — fetch via SDRM or CSV only.
+# Must NOT be passed into fetch_macro_main.py or fetch_macro_market.py.
+
 data:
   start_date: "2005-01-01"
-  end_date: null   # default → today
+  end_date: null
 
   sources:
       companies_folder: "data/raw_companies"
       macro_folder: "data/raw_macro"
       market_folder: "data/raw_macro_market"
       news_folder: "data/news/raw"
+      fred_folder: "data/raw_fred"
+      sector_folder: "data/raw_sector"
+      abs_folder: "data/raw_abs"
+      rba_folder: "data/raw_rba"
+      macro_fundamentals_folder: "data/raw_macro_fundamentals"
+
+
 
   processed:
       companies_folder: "data/processed_companies"
       macro_folder: "data/processed_macro"
       market_folder: "data/processed_macro_market"
+      fred_folder: "data/processed_fred"
+      sector_folder: "data/processed_sector"
+      abs_folder: "data/processed_abs"
+      rba_folder: "data/processed_rba"
+      macro_fundamentals_folder: "data/processed_macro_fundamentals"
       calendar_folder: "data/processed_calendar"
       news_sentiment_folder: "data/news/sentiment"
       tft_ready_folder: "data/tft_ready"
+
+
+paths:
+  # GDP (already done)
+  raw_abs_gdp: data/raw_abs/
+
+  # --- NEW ABS macro series ---
+  raw_abs_cpi: data/raw_abs/
+  raw_abs_labour: data/raw_abs/
+  raw_abs_terms_of_trade: data/raw_abs/
+  raw_abs_wpi: data/raw_abs/
+  raw_abs_hpi: data/raw_abs/
+
+fetchers:
+  abs_cpi:
+    script: scripts/data/fetch/fetch_abs_cpi.py
+
+  abs_labour:
+    script: scripts/data/fetch/fetch_abs_labour.py
+
+  abs_terms_of_trade:
+    script: scripts/data/fetch/fetch_abs_terms_of_trade.py
+
+  abs_wpi:
+    script: scripts/data/fetch/fetch_abs_wpi.py
+
+  abs_hpi:
+    script: scripts/data/fetch/fetch_abs_hpi.py
 
 
 # =====================================================
@@ -107,6 +150,90 @@ market:
     - SI=F
     - DBC
 
+# NOTE:
+# ABS and RBA series IDs (A2325846C, FIRMMCRTD, etc.)
+# are *not* Yahoo Finance tickers.
+# They will be fetched via ABS SDMX API or RBA CSV endpoints.
+
+# -----------------------------------------------------
+# FRED MACRO TICKERS (US)
+# -----------------------------------------------------
+
+regions:
+  - US
+  - AUS
+
+fred_macro:
+  canonical_prefix: "US"
+  frequency: "mixed"   # CPI/GDP quarterly, labour monthly, yields daily
+  sources:
+    CPI: "CPIAUCSL"           # US CPI
+    UNEMP: "UNRATE"           # US unemployment rate
+    FEDFUNDS: "FEDFUNDS"      # Fed Funds rate
+    DGS10: "DGS10"            # 10-year Treasury yield
+    DGS2: "DGS2"              # 2-year Treasury yield
+    PMI_MFG: "IPMAN"                          #"PCUOMFGOMFG"      # Manufacturing PMI (working)
+    PMI_SERV: "SRVPRD"
+
+    GDP: "GDPC1"              # Real GDP
+# -----------------------------------------------------
+# AUSTRALIAN MACRO (ABS + RBA)
+# -----------------------------------------------------
+australia_macro:
+  canonical_prefix: "AUS"
+  frequency: "mixed"   # CPI/GDP quarterly, labour monthly, yields daily
+  # For ABS series we fetch *full dataflows* (all series, all regions).
+  # For RBA we fetch entire F1 and F2 tables as CSV.
+  sources:
+    # ABS – Data API dataflows (we will call /rest/data/ABS,{FLOW}/all)
+    ABS_CPI: "CPI"        # Consumer Price Index dataflow
+    ABS_UNEMP: "LF"       # Labour Force dataflow
+    ABS_GDP: "ANA_AGG"    # National Accounts (GDP) dataflow
+
+    # RBA – CSV tables
+    RBA_CASH_RATE: "f1-data"   # F1 Interest rates
+    RBA_YIELD_10Y: "f2-data"   # F2 gov bond yields (we’ll filter 10Y column)
+    RBA_YIELD_2Y: "f2-data"    # F2 gov bond yields (we’ll filter 2Y column)
+
+macro_fundamentals:
+  include_us: true
+  include_aus: true
+  us: ["CPI", "UNEMP", "FEDFUNDS", "GDP", "PMI_MFG", "PMI_SERV", "DGS10", "DGS2"]
+  aus: [
+    "ABS_CPI",
+    "ABS_UNEMP",
+    "ABS_GDP",
+    "RBA_CASH_RATE",
+    "RBA_YIELD_10Y",
+    "RBA_YIELD_2Y"
+  ]
+
+fetch:
+  fred: true
+  abs: true
+  rba: true
+  sector: true
+
+
+
+# -----------------------------------------------------
+# SECTOR TICKERS
+# -----------------------------------------------------
+
+sector:
+  tickers:
+    - XLF
+    - XLK
+    - XLI
+    - XLE
+    - XLV
+    - XLU
+    - XLB
+    - XLP
+    - XLY
+    - XLRE
+    - XLC
+
 
 # -----------------------------------------------------
 # NEWS SENTIMENT — aligned with macro & market assets
@@ -129,6 +256,7 @@ news:
     OIL: "BZ=F"
     COPPER: "HG=F"
     DBC: "DBC"
+
 
 
 # -----------------------------------------------------
