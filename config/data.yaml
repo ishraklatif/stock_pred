@@ -18,6 +18,7 @@ data:
       abs_folder: "data/raw_abs"
       rba_folder: "data/raw_rba"
       macro_fundamentals_folder: "data/raw_macro_fundamentals"
+      macro_extra_folder: "data/raw_macro_extra"
 
 
 
@@ -30,6 +31,8 @@ data:
       abs_folder: "data/processed_abs"
       rba_folder: "data/processed_rba"
       macro_fundamentals_folder: "data/processed_macro_fundamentals"
+      macro_extra_folder: "data/processed_macro_extra"
+
       calendar_folder: "data/processed_calendar"
       news_sentiment_folder: "data/news/sentiment"
       tft_ready_folder: "data/tft_ready"

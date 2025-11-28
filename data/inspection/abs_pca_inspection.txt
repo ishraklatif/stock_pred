@@ -1,0 +1,374 @@
+==========================================================================================
+[INSPECT] Deep PCA GDP/ToT inspection
+==========================================================================================
+
+[INSPECT] GDP candidate files:
+  AUS_GDP_DFD_M5_10_Q.parquet               n=  160  1985-09-30 → 2025-06-30
+  AUS_GDP_DFD_M5_20_Q.parquet               n=  160  1985-09-30 → 2025-06-30
+  AUS_GDP_DFD_M6_10_Q.parquet               n=  159  1985-12-31 → 2025-06-30
+  AUS_GDP_DFD_M6_20_Q.parquet               n=  159  1985-12-31 → 2025-06-30
+  AUS_GDP_GNI_M1_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GNI_M1_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GNI_M1_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_GNI_M2_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GNI_M2_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GNI_M2_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_GNI_M3_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GNI_M3_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GNI_M3_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_GPM_HRW_M5_10_Q.parquet           n=  188  1978-09-30 → 2025-06-30
+  AUS_GDP_GPM_HRW_M5_20_Q.parquet           n=  188  1978-09-30 → 2025-06-30
+  AUS_GDP_GPM_HRW_M5_30_Q.parquet           n=  163  1978-09-30 → 2019-03-31
+  AUS_GDP_GPM_HRW_M6_10_Q.parquet           n=  187  1978-12-31 → 2025-06-30
+  AUS_GDP_GPM_HRW_M6_20_Q.parquet           n=  187  1978-12-31 → 2025-06-30
+  AUS_GDP_GPM_HRW_M6_30_Q.parquet           n=  162  1978-12-31 → 2019-03-31
+  AUS_GDP_GPM_M1_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_M1_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_M1_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_GPM_M2_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GPM_M2_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GPM_M2_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_GPM_M3_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_M3_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_M3_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_GPM_M4_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GPM_M4_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GPM_M4_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_GPM_M5_10_Q.parquet               n=  160  1985-09-30 → 2025-06-30
+  AUS_GDP_GPM_M5_20_Q.parquet               n=  160  1985-09-30 → 2025-06-30
+  AUS_GDP_GPM_M6_10_Q.parquet               n=  159  1985-12-31 → 2025-06-30
+  AUS_GDP_GPM_M6_20_Q.parquet               n=  159  1985-12-31 → 2025-06-30
+  AUS_GDP_GPM_MKT_HRW_M5_10_Q.parquet       n=  160  1985-09-30 → 2025-06-30
+  AUS_GDP_GPM_MKT_HRW_M5_20_Q.parquet       n=  188  1978-09-30 → 2025-06-30
+  AUS_GDP_GPM_MKT_HRW_M5_30_Q.parquet       n=  163  1978-09-30 → 2019-03-31
+  AUS_GDP_GPM_MKT_HRW_M6_10_Q.parquet       n=  159  1985-12-31 → 2025-06-30
+  AUS_GDP_GPM_MKT_HRW_M6_20_Q.parquet       n=  187  1978-12-31 → 2025-06-30
+  AUS_GDP_GPM_MKT_HRW_M6_30_Q.parquet       n=  162  1978-12-31 → 2019-03-31
+  AUS_GDP_GPM_PCA_M1_10_Q.parquet           n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_PCA_M1_20_Q.parquet           n=  208  1973-09-30 → 2025-06-30
+  AUS_GDP_GPM_PCA_M1_30_Q.parquet           n=  183  1973-09-30 → 2019-03-31
+  AUS_GDP_GPM_PCA_M2_10_Q.parquet           n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_GPM_PCA_M2_20_Q.parquet           n=  207  1973-12-31 → 2025-06-30
+  AUS_GDP_GPM_PCA_M2_30_Q.parquet           n=  182  1973-12-31 → 2019-03-31
+  AUS_GDP_GPM_PCA_M3_10_Q.parquet           n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_GPM_PCA_M3_20_Q.parquet           n=  208  1973-09-30 → 2025-06-30
+  AUS_GDP_GPM_PCA_M3_30_Q.parquet           n=  183  1973-09-30 → 2019-03-31
+  AUS_GDP_GPM_PHW_M5_10_Q.parquet           n=  188  1978-09-30 → 2025-06-30
+  AUS_GDP_GPM_PHW_M5_20_Q.parquet           n=  188  1978-09-30 → 2025-06-30
+  AUS_GDP_GPM_PHW_M5_30_Q.parquet           n=  163  1978-09-30 → 2019-03-31
+  AUS_GDP_GPM_PHW_M6_10_Q.parquet           n=  187  1978-12-31 → 2025-06-30
+  AUS_GDP_GPM_PHW_M6_20_Q.parquet           n=  187  1978-12-31 → 2025-06-30
+  AUS_GDP_GPM_PHW_M6_30_Q.parquet           n=  162  1978-12-31 → 2019-03-31
+  AUS_GDP_GVA_MKT_M1_10_Q.parquet           n=  124  1994-09-30 → 2025-06-30
+  AUS_GDP_GVA_MKT_M1_20_Q.parquet           n=  124  1994-09-30 → 2025-06-30
+  AUS_GDP_GVA_MKT_M1_30_Q.parquet           n=   99  1994-09-30 → 2019-03-31
+  AUS_GDP_GVA_MKT_M2_10_Q.parquet           n=  123  1994-12-31 → 2025-06-30
+  AUS_GDP_GVA_MKT_M2_20_Q.parquet           n=  123  1994-12-31 → 2025-06-30
+  AUS_GDP_GVA_MKT_M2_30_Q.parquet           n=   98  1994-12-31 → 2019-03-31
+  AUS_GDP_GVA_MKT_PHW_M5_10_Q.parquet       n=  124  1994-09-30 → 2025-06-30
+  AUS_GDP_GVA_MKT_PHW_M5_20_Q.parquet       n=  124  1994-09-30 → 2025-06-30
+  AUS_GDP_GVA_MKT_PHW_M5_30_Q.parquet       n=   99  1994-09-30 → 2019-03-31
+  AUS_GDP_GVA_MKT_PHW_M6_10_Q.parquet       n=  123  1994-12-31 → 2025-06-30
+  AUS_GDP_GVA_MKT_PHW_M6_20_Q.parquet       n=  123  1994-12-31 → 2025-06-30
+  AUS_GDP_GVA_MKT_PHW_M6_30_Q.parquet       n=   98  1994-12-31 → 2019-03-31
+  AUS_GDP_HSR_M7_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_HSR_M7_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_HSR_M7_30_Q.parquet               n=  183  1973-09-30 → 2019-03-31
+  AUS_GDP_NDP_M1_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_NDP_M1_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_NDP_M1_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_NDP_M2_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_NDP_M2_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_NDP_M2_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_NNDI_M1_10_Q.parquet              n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_NNDI_M1_20_Q.parquet              n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_NNDI_M1_30_Q.parquet              n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_NNDI_M2_10_Q.parquet              n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_NNDI_M2_20_Q.parquet              n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_NNDI_M2_30_Q.parquet              n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_NNDI_PCA_M1_10_Q.parquet          n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_NNDI_PCA_M1_20_Q.parquet          n=  208  1973-09-30 → 2025-06-30
+  AUS_GDP_NNDI_PCA_M1_30_Q.parquet          n=  183  1973-09-30 → 2019-03-31
+  AUS_GDP_NNDI_PCA_M2_10_Q.parquet          n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_NNDI_PCA_M2_20_Q.parquet          n=  207  1973-12-31 → 2025-06-30
+  AUS_GDP_NNDI_PCA_M2_30_Q.parquet          n=  182  1973-12-31 → 2019-03-31
+  AUS_GDP_RDI_M1_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_RDI_M1_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_RDI_M1_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_RDI_M2_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_RDI_M2_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_RDI_M2_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+  AUS_GDP_RULC_LAB_98_M5_30_Q.parquet       n=  135  1985-09-30 → 2019-03-31
+  AUS_GDP_RULC_LAB_98_M6_30_Q.parquet       n=  134  1985-12-31 → 2019-03-31
+  AUS_GDP_RULC_LAB_M5_30_Q.parquet          n=  135  1985-09-30 → 2019-03-31
+  AUS_GDP_RULC_LAB_M6_30_Q.parquet          n=  134  1985-12-31 → 2019-03-31
+  AUS_GDP_SAV_M3_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_SAV_M3_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_SAV_M3_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+
+[INSPECT] ToT candidate files:
+  AUS_GDP_TTR_M5_10_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_TTR_M5_20_Q.parquet               n=  264  1959-09-30 → 2025-06-30
+  AUS_GDP_TTR_M5_30_Q.parquet               n=  239  1959-09-30 → 2019-03-31
+  AUS_GDP_TTR_M6_10_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_TTR_M6_20_Q.parquet               n=  263  1959-12-31 → 2025-06-30
+  AUS_GDP_TTR_M6_30_Q.parquet               n=  238  1959-12-31 → 2019-03-31
+
+[INSPECT] Building GDP-wide matrix...
+
+[INSPECT] GDP-wide shape: (264, 102)
+[INSPECT] Columns: ['AUS_GDP_DFD_M5_10_Q', 'AUS_GDP_DFD_M5_20_Q', 'AUS_GDP_DFD_M6_10_Q', 'AUS_GDP_DFD_M6_20_Q', 'AUS_GDP_GNI_M1_10_Q', 'AUS_GDP_GNI_M1_20_Q', 'AUS_GDP_GNI_M1_30_Q', 'AUS_GDP_GNI_M2_10_Q', 'AUS_GDP_GNI_M2_20_Q', 'AUS_GDP_GNI_M2_30_Q', 'AUS_GDP_GNI_M3_10_Q', 'AUS_GDP_GNI_M3_20_Q', 'AUS_GDP_GNI_M3_30_Q', 'AUS_GDP_GPM_HRW_M5_10_Q', 'AUS_GDP_GPM_HRW_M5_20_Q', 'AUS_GDP_GPM_HRW_M5_30_Q', 'AUS_GDP_GPM_HRW_M6_10_Q', 'AUS_GDP_GPM_HRW_M6_20_Q', 'AUS_GDP_GPM_HRW_M6_30_Q', 'AUS_GDP_GPM_M1_10_Q', 'AUS_GDP_GPM_M1_20_Q', 'AUS_GDP_GPM_M1_30_Q', 'AUS_GDP_GPM_M2_10_Q', 'AUS_GDP_GPM_M2_20_Q', 'AUS_GDP_GPM_M2_30_Q', 'AUS_GDP_GPM_M3_10_Q', 'AUS_GDP_GPM_M3_20_Q', 'AUS_GDP_GPM_M3_30_Q', 'AUS_GDP_GPM_M4_10_Q', 'AUS_GDP_GPM_M4_20_Q', 'AUS_GDP_GPM_M4_30_Q', 'AUS_GDP_GPM_M5_10_Q', 'AUS_GDP_GPM_M5_20_Q', 'AUS_GDP_GPM_M6_10_Q', 'AUS_GDP_GPM_M6_20_Q', 'AUS_GDP_GPM_MKT_HRW_M5_10_Q', 'AUS_GDP_GPM_MKT_HRW_M5_20_Q', 'AUS_GDP_GPM_MKT_HRW_M5_30_Q', 'AUS_GDP_GPM_MKT_HRW_M6_10_Q', 'AUS_GDP_GPM_MKT_HRW_M6_20_Q', 'AUS_GDP_GPM_MKT_HRW_M6_30_Q', 'AUS_GDP_GPM_PCA_M1_10_Q', 'AUS_GDP_GPM_PCA_M1_20_Q', 'AUS_GDP_GPM_PCA_M1_30_Q', 'AUS_GDP_GPM_PCA_M2_10_Q', 'AUS_GDP_GPM_PCA_M2_20_Q', 'AUS_GDP_GPM_PCA_M2_30_Q', 'AUS_GDP_GPM_PCA_M3_10_Q', 'AUS_GDP_GPM_PCA_M3_20_Q', 'AUS_GDP_GPM_PCA_M3_30_Q', 'AUS_GDP_GPM_PHW_M5_10_Q', 'AUS_GDP_GPM_PHW_M5_20_Q', 'AUS_GDP_GPM_PHW_M5_30_Q', 'AUS_GDP_GPM_PHW_M6_10_Q', 'AUS_GDP_GPM_PHW_M6_20_Q', 'AUS_GDP_GPM_PHW_M6_30_Q', 'AUS_GDP_GVA_MKT_M1_10_Q', 'AUS_GDP_GVA_MKT_M1_20_Q', 'AUS_GDP_GVA_MKT_M1_30_Q', 'AUS_GDP_GVA_MKT_M2_10_Q', 'AUS_GDP_GVA_MKT_M2_20_Q', 'AUS_GDP_GVA_MKT_M2_30_Q', 'AUS_GDP_GVA_MKT_PHW_M5_10_Q', 'AUS_GDP_GVA_MKT_PHW_M5_20_Q', 'AUS_GDP_GVA_MKT_PHW_M5_30_Q', 'AUS_GDP_GVA_MKT_PHW_M6_10_Q', 'AUS_GDP_GVA_MKT_PHW_M6_20_Q', 'AUS_GDP_GVA_MKT_PHW_M6_30_Q', 'AUS_GDP_HSR_M7_10_Q', 'AUS_GDP_HSR_M7_20_Q', 'AUS_GDP_HSR_M7_30_Q', 'AUS_GDP_NDP_M1_10_Q', 'AUS_GDP_NDP_M1_20_Q', 'AUS_GDP_NDP_M1_30_Q', 'AUS_GDP_NDP_M2_10_Q', 'AUS_GDP_NDP_M2_20_Q', 'AUS_GDP_NDP_M2_30_Q', 'AUS_GDP_NNDI_M1_10_Q', 'AUS_GDP_NNDI_M1_20_Q', 'AUS_GDP_NNDI_M1_30_Q', 'AUS_GDP_NNDI_M2_10_Q', 'AUS_GDP_NNDI_M2_20_Q', 'AUS_GDP_NNDI_M2_30_Q', 'AUS_GDP_NNDI_PCA_M1_10_Q', 'AUS_GDP_NNDI_PCA_M1_20_Q', 'AUS_GDP_NNDI_PCA_M1_30_Q', 'AUS_GDP_NNDI_PCA_M2_10_Q', 'AUS_GDP_NNDI_PCA_M2_20_Q', 'AUS_GDP_NNDI_PCA_M2_30_Q', 'AUS_GDP_RDI_M1_10_Q', 'AUS_GDP_RDI_M1_20_Q', 'AUS_GDP_RDI_M1_30_Q', 'AUS_GDP_RDI_M2_10_Q', 'AUS_GDP_RDI_M2_20_Q', 'AUS_GDP_RDI_M2_30_Q', 'AUS_GDP_RULC_LAB_98_M5_30_Q', 'AUS_GDP_RULC_LAB_98_M6_30_Q', 'AUS_GDP_RULC_LAB_M5_30_Q', 'AUS_GDP_RULC_LAB_M6_30_Q', 'AUS_GDP_SAV_M3_10_Q', 'AUS_GDP_SAV_M3_20_Q', 'AUS_GDP_SAV_M3_30_Q']
+
+[INSPECT] Missing values:
+AUS_GDP_DFD_M5_10_Q         104
+AUS_GDP_DFD_M5_20_Q         104
+AUS_GDP_DFD_M6_10_Q         105
+AUS_GDP_DFD_M6_20_Q         105
+AUS_GDP_GNI_M1_10_Q           0
+                           ... 
+AUS_GDP_RULC_LAB_M5_30_Q    129
+AUS_GDP_RULC_LAB_M6_30_Q    130
+AUS_GDP_SAV_M3_10_Q           0
+AUS_GDP_SAV_M3_20_Q           0
+AUS_GDP_SAV_M3_30_Q          25
+Length: 102, dtype: int64
+
+[INSPECT] Correlation matrix:
+                          AUS_GDP_DFD_M5_10_Q  AUS_GDP_DFD_M5_20_Q  ...  AUS_GDP_SAV_M3_20_Q  AUS_GDP_SAV_M3_30_Q
+AUS_GDP_DFD_M5_10_Q                     1.000                1.000  ...                0.841                0.801
+AUS_GDP_DFD_M5_20_Q                     1.000                1.000  ...                0.841                0.801
+AUS_GDP_DFD_M6_10_Q                    -0.205               -0.205  ...                0.033               -0.163
+AUS_GDP_DFD_M6_20_Q                    -0.205               -0.205  ...                0.033               -0.163
+AUS_GDP_GNI_M1_10_Q                     0.988                0.988  ...                0.909                0.900
+...                                       ...                  ...  ...                  ...                  ...
+AUS_GDP_RULC_LAB_M5_30_Q               -0.954               -0.954  ...               -0.838               -0.849
+AUS_GDP_RULC_LAB_M6_30_Q                0.021                0.021  ...                0.009                0.016
+AUS_GDP_SAV_M3_10_Q                     0.800                0.800  ...                0.959                0.952
+AUS_GDP_SAV_M3_20_Q                     0.841                0.841  ...                1.000                0.996
+AUS_GDP_SAV_M3_30_Q                     0.801                0.801  ...                0.996                1.000
+
+[102 rows x 102 columns]
+
+[INSPECT] PCA diagnostics...
+
+Eigenvalues (sorted):
+  PC1: 54.1091 (53.05%)
+  PC2: 12.4206 (12.18%)
+  PC3: 10.5718 (10.36%)
+  PC4: 7.3869 (7.24%)
+  PC5: 4.1327 (4.05%)
+  PC6: 2.2167 (2.17%)
+  PC7: 2.1587 (2.12%)
+  PC8: 1.8538 (1.82%)
+
+Loadings for PC1:
+  AUS_GDP_DFD_M5_10_Q                       -0.1350
+  AUS_GDP_DFD_M5_20_Q                       -0.1350
+  AUS_GDP_DFD_M6_10_Q                       +0.0045
+  AUS_GDP_DFD_M6_20_Q                       +0.0045
+  AUS_GDP_GNI_M1_10_Q                       -0.1348
+  AUS_GDP_GNI_M1_20_Q                       -0.1352
+  AUS_GDP_GNI_M1_30_Q                       -0.1353
+  AUS_GDP_GNI_M2_10_Q                       +0.0038
+  AUS_GDP_GNI_M2_20_Q                       +0.0322
+  AUS_GDP_GNI_M2_30_Q                       +0.0420
+  AUS_GDP_GNI_M3_10_Q                       -0.1346
+  AUS_GDP_GNI_M3_20_Q                       -0.1346
+  AUS_GDP_GNI_M3_30_Q                       -0.1346
+  AUS_GDP_GPM_HRW_M5_10_Q                   -0.1317
+  AUS_GDP_GPM_HRW_M5_20_Q                   -0.1348
+  AUS_GDP_GPM_HRW_M5_30_Q                   -0.1348
+  AUS_GDP_GPM_HRW_M6_10_Q                   +0.0009
+  AUS_GDP_GPM_HRW_M6_20_Q                   +0.0008
+  AUS_GDP_GPM_HRW_M6_30_Q                   +0.0021
+  AUS_GDP_GPM_M1_10_Q                       -0.1340
+  AUS_GDP_GPM_M1_20_Q                       -0.1346
+  AUS_GDP_GPM_M1_30_Q                       -0.1346
+  AUS_GDP_GPM_M2_10_Q                       +0.0027
+  AUS_GDP_GPM_M2_20_Q                       +0.0413
+  AUS_GDP_GPM_M2_30_Q                       +0.0657
+  AUS_GDP_GPM_M3_10_Q                       -0.1346
+  AUS_GDP_GPM_M3_20_Q                       -0.1346
+  AUS_GDP_GPM_M3_30_Q                       -0.1347
+  AUS_GDP_GPM_M4_10_Q                       +0.0042
+  AUS_GDP_GPM_M4_20_Q                       +0.0298
+  AUS_GDP_GPM_M4_30_Q                       +0.0418
+  AUS_GDP_GPM_M5_10_Q                       -0.1347
+  AUS_GDP_GPM_M5_20_Q                       -0.1347
+  AUS_GDP_GPM_M6_10_Q                       +0.0069
+  AUS_GDP_GPM_M6_20_Q                       +0.0069
+  AUS_GDP_GPM_MKT_HRW_M5_10_Q               -0.1318
+  AUS_GDP_GPM_MKT_HRW_M5_20_Q               -0.1343
+  AUS_GDP_GPM_MKT_HRW_M5_30_Q               -0.1344
+  AUS_GDP_GPM_MKT_HRW_M6_10_Q               +0.0021
+  AUS_GDP_GPM_MKT_HRW_M6_20_Q               +0.0091
+  AUS_GDP_GPM_MKT_HRW_M6_30_Q               +0.0174
+  AUS_GDP_GPM_PCA_M1_10_Q                   -0.1293
+  AUS_GDP_GPM_PCA_M1_20_Q                   -0.1325
+  AUS_GDP_GPM_PCA_M1_30_Q                   -0.1326
+  AUS_GDP_GPM_PCA_M2_10_Q                   +0.0040
+  AUS_GDP_GPM_PCA_M2_20_Q                   +0.0514
+  AUS_GDP_GPM_PCA_M2_30_Q                   +0.0808
+  AUS_GDP_GPM_PCA_M3_10_Q                   -0.1351
+  AUS_GDP_GPM_PCA_M3_20_Q                   -0.1352
+  AUS_GDP_GPM_PCA_M3_30_Q                   -0.1353
+  AUS_GDP_GPM_PHW_M5_10_Q                   -0.1307
+  AUS_GDP_GPM_PHW_M5_20_Q                   -0.1319
+  AUS_GDP_GPM_PHW_M5_30_Q                   -0.1320
+  AUS_GDP_GPM_PHW_M6_10_Q                   +0.0045
+  AUS_GDP_GPM_PHW_M6_20_Q                   +0.0284
+  AUS_GDP_GPM_PHW_M6_30_Q                   +0.0389
+  AUS_GDP_GVA_MKT_M1_10_Q                   -0.1339
+  AUS_GDP_GVA_MKT_M1_20_Q                   -0.1347
+  AUS_GDP_GVA_MKT_M1_30_Q                   -0.1347
+  AUS_GDP_GVA_MKT_M2_10_Q                   +0.0032
+  AUS_GDP_GVA_MKT_M2_20_Q                   +0.0451
+  AUS_GDP_GVA_MKT_M2_30_Q                   +0.0641
+  AUS_GDP_GVA_MKT_PHW_M5_10_Q               -0.1320
+  AUS_GDP_GVA_MKT_PHW_M5_20_Q               -0.1328
+  AUS_GDP_GVA_MKT_PHW_M5_30_Q               -0.1329
+  AUS_GDP_GVA_MKT_PHW_M6_10_Q               +0.0037
+  AUS_GDP_GVA_MKT_PHW_M6_20_Q               +0.0290
+  AUS_GDP_GVA_MKT_PHW_M6_30_Q               +0.0386
+  AUS_GDP_HSR_M7_10_Q                       -0.0538
+  AUS_GDP_HSR_M7_20_Q                       -0.0677
+  AUS_GDP_HSR_M7_30_Q                       -0.0695
+  AUS_GDP_NDP_M1_10_Q                       -0.1331
+  AUS_GDP_NDP_M1_20_Q                       -0.1344
+  AUS_GDP_NDP_M1_30_Q                       -0.1345
+  AUS_GDP_NDP_M2_10_Q                       +0.0021
+  AUS_GDP_NDP_M2_20_Q                       +0.0343
+  AUS_GDP_NDP_M2_30_Q                       +0.0583
+  AUS_GDP_NNDI_M1_10_Q                      -0.1343
+  AUS_GDP_NNDI_M1_20_Q                      -0.1352
+  AUS_GDP_NNDI_M1_30_Q                      -0.1352
+  AUS_GDP_NNDI_M2_10_Q                      +0.0032
+  AUS_GDP_NNDI_M2_20_Q                      +0.0292
+  AUS_GDP_NNDI_M2_30_Q                      +0.0378
+  AUS_GDP_NNDI_PCA_M1_10_Q                  -0.1290
+  AUS_GDP_NNDI_PCA_M1_20_Q                  -0.1323
+  AUS_GDP_NNDI_PCA_M1_30_Q                  -0.1324
+  AUS_GDP_NNDI_PCA_M2_10_Q                  +0.0043
+  AUS_GDP_NNDI_PCA_M2_20_Q                  +0.0350
+  AUS_GDP_NNDI_PCA_M2_30_Q                  +0.0467
+  AUS_GDP_RDI_M1_10_Q                       -0.1348
+  AUS_GDP_RDI_M1_20_Q                       -0.1352
+  AUS_GDP_RDI_M1_30_Q                       -0.1352
+  AUS_GDP_RDI_M2_10_Q                       +0.0042
+  AUS_GDP_RDI_M2_20_Q                       +0.0335
+  AUS_GDP_RDI_M2_30_Q                       +0.0432
+  AUS_GDP_RULC_LAB_98_M5_30_Q               +0.1270
+  AUS_GDP_RULC_LAB_98_M6_30_Q               +0.0046
+  AUS_GDP_RULC_LAB_M5_30_Q                  +0.1293
+  AUS_GDP_RULC_LAB_M6_30_Q                  -0.0008
+  AUS_GDP_SAV_M3_10_Q                       -0.0968
+  AUS_GDP_SAV_M3_20_Q                       -0.1042
+  AUS_GDP_SAV_M3_30_Q                       -0.1064
+
+[INSPECT] Canonical PCA GDP (daily):
+        date     value   series region       source
+0 1959-09-30 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+1 1959-10-01 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+2 1959-10-02 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+3 1959-10-03 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+4 1959-10-04 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+5 1959-10-05 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+6 1959-10-06 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+7 1959-10-07 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+8 1959-10-08 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+9 1959-10-09 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+            date     value   series region       source
+24006 2025-06-21  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24007 2025-06-22  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24008 2025-06-23  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24009 2025-06-24  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24010 2025-06-25  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24011 2025-06-26  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24012 2025-06-27  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24013 2025-06-28  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24014 2025-06-29  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+24015 2025-06-30  2.187208  AUS_GDP    AUS  ABS_PCA_GDP
+
+[INSPECT] Back-converted quarterly:
+               value   series region       source
+date                                             
+1959-09-30 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+1959-12-31 -1.155326  AUS_GDP    AUS  ABS_PCA_GDP
+1960-03-31 -1.129888  AUS_GDP    AUS  ABS_PCA_GDP
+1960-06-30 -1.151319  AUS_GDP    AUS  ABS_PCA_GDP
+1960-09-30 -1.140458  AUS_GDP    AUS  ABS_PCA_GDP
+1960-12-31 -1.136779  AUS_GDP    AUS  ABS_PCA_GDP
+1961-03-31 -1.118433  AUS_GDP    AUS  ABS_PCA_GDP
+1961-06-30 -1.145083  AUS_GDP    AUS  ABS_PCA_GDP
+1961-09-30 -1.152894  AUS_GDP    AUS  ABS_PCA_GDP
+1961-12-31 -1.146909  AUS_GDP    AUS  ABS_PCA_GDP
+1962-03-31 -1.123594  AUS_GDP    AUS  ABS_PCA_GDP
+1962-06-30 -1.139135  AUS_GDP    AUS  ABS_PCA_GDP
+               value   series region       source
+date                                             
+2022-09-30  2.266015  AUS_GDP    AUS  ABS_PCA_GDP
+2022-12-31  2.175909  AUS_GDP    AUS  ABS_PCA_GDP
+2023-03-31  2.334793  AUS_GDP    AUS  ABS_PCA_GDP
+2023-06-30  2.140746  AUS_GDP    AUS  ABS_PCA_GDP
+2023-09-30  2.192592  AUS_GDP    AUS  ABS_PCA_GDP
+2023-12-31  2.192226  AUS_GDP    AUS  ABS_PCA_GDP
+2024-03-31  2.346969  AUS_GDP    AUS  ABS_PCA_GDP
+2024-06-30  2.112042  AUS_GDP    AUS  ABS_PCA_GDP
+2024-09-30  2.160773  AUS_GDP    AUS  ABS_PCA_GDP
+2024-12-31  2.168147  AUS_GDP    AUS  ABS_PCA_GDP
+2025-03-31  2.262281  AUS_GDP    AUS  ABS_PCA_GDP
+2025-06-30  2.092412  AUS_GDP    AUS  ABS_PCA_GDP
+
+[INSPECT] Canonical PCA ToT (daily):
+        date     value   series region       source
+0 1959-12-31  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+1 1960-01-01  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+2 1960-01-02  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+3 1960-01-03  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+4 1960-01-04  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+5 1960-01-05  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+6 1960-01-06  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+7 1960-01-07  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+8 1960-01-08  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+9 1960-01-09  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+            date     value   series region       source
+21631 2019-03-22 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21632 2019-03-23 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21633 2019-03-24 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21634 2019-03-25 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21635 2019-03-26 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21636 2019-03-27 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21637 2019-03-28 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21638 2019-03-29 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21639 2019-03-30 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT
+21640 2019-03-31 -1.943672  AUS_TOT    AUS  ABS_PCA_TOT
+
+[INSPECT] Back-converted quarterly:
+               value   series region       source
+date                                             
+1959-12-31  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+1960-03-31  0.432609  AUS_TOT    AUS  ABS_PCA_TOT
+1960-06-30 -0.322769  AUS_TOT    AUS  ABS_PCA_TOT
+1960-09-30 -0.040703  AUS_TOT    AUS  ABS_PCA_TOT
+1960-12-31  0.939805  AUS_TOT    AUS  ABS_PCA_TOT
+1961-03-31 -0.078563  AUS_TOT    AUS  ABS_PCA_TOT
+1961-06-30  1.143318  AUS_TOT    AUS  ABS_PCA_TOT
+1961-09-30  1.236734  AUS_TOT    AUS  ABS_PCA_TOT
+1961-12-31 -0.405585  AUS_TOT    AUS  ABS_PCA_TOT
+1962-03-31  0.458003  AUS_TOT    AUS  ABS_PCA_TOT
+1962-06-30  0.067835  AUS_TOT    AUS  ABS_PCA_TOT
+1962-09-30  0.386928  AUS_TOT    AUS  ABS_PCA_TOT
+               value   series region       source
+date                                             
+2016-06-30 -0.137513  AUS_TOT    AUS  ABS_PCA_TOT
+2016-09-30 -0.948823  AUS_TOT    AUS  ABS_PCA_TOT
+2016-12-31 -1.629537  AUS_TOT    AUS  ABS_PCA_TOT
+2017-03-31 -2.756159  AUS_TOT    AUS  ABS_PCA_TOT
+2017-06-30 -1.997617  AUS_TOT    AUS  ABS_PCA_TOT
+2017-09-30 -0.686104  AUS_TOT    AUS  ABS_PCA_TOT
+2017-12-31 -1.031361  AUS_TOT    AUS  ABS_PCA_TOT
+2018-03-31 -1.116852  AUS_TOT    AUS  ABS_PCA_TOT
+2018-06-30 -1.530372  AUS_TOT    AUS  ABS_PCA_TOT
+2018-09-30 -1.284816  AUS_TOT    AUS  ABS_PCA_TOT
+2018-12-31 -1.527933  AUS_TOT    AUS  ABS_PCA_TOT
+2019-03-31 -1.775197  AUS_TOT    AUS  ABS_PCA_TOT

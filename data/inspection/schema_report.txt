@@ -1,0 +1,3077 @@
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/AXJO.parquet
+TYPE: ohlc
+ROWS: 5275
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/CSI300.parquet
+TYPE: ohlc
+ROWS: 1141
+DATE COL: date
+DATE RANGE: 2021-03-11 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/FTSE.parquet
+TYPE: ohlc
+ROWS: 5277
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/GSPC.parquet
+TYPE: ohlc
+ROWS: 5257
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/HSI.parquet
+TYPE: ohlc
+ROWS: 5146
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/N225.parquet
+TYPE: ohlc
+ROWS: 5112
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/SSE.parquet
+TYPE: ohlc
+ROWS: 5069
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro/VIX.parquet
+TYPE: ohlc
+ROWS: 5257
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/AUDJPY.parquet
+TYPE: ohlc
+ROWS: 5438
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/AUDUSD.parquet
+TYPE: ohlc
+ROWS: 5079
+DATE COL: date
+DATE RANGE: 2006-05-16 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/COPPER.parquet
+TYPE: ohlc
+ROWS: 5256
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/DBC.parquet
+TYPE: ohlc
+ROWS: 4982
+DATE COL: date
+DATE RANGE: 2006-02-06 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/DXY.parquet
+TYPE: ohlc
+ROWS: 5263
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/GOLD.parquet
+TYPE: ohlc
+ROWS: 5252
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/OIL.parquet
+TYPE: ohlc
+ROWS: 5256
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_market/SILVER.parquet
+TYPE: ohlc
+ROWS: 5253
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/HY_SPREAD.parquet
+TYPE: value_series
+ROWS: 7632
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/IG_SPREAD.parquet
+TYPE: value_series
+ROWS: 7632
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/MOVE.parquet
+TYPE: ohlc
+ROWS: 7633
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-26 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float64, nulls=0)
+  - high (float64, nulls=0)
+  - low (float64, nulls=0)
+  - close (float64, nulls=0)
+  - volume (int64, nulls=0)
+  - series (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/TED_SPREAD.parquet
+TYPE: value_series
+ROWS: 6228
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2022-01-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/US30Y.parquet
+TYPE: value_series
+ROWS: 7632
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/US3M.parquet
+TYPE: value_series
+ROWS: 7632
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/US5Y.parquet
+TYPE: value_series
+ROWS: 7632
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_macro_extra/VVIX.parquet
+TYPE: ohlc
+ROWS: 6903
+DATE COL: date
+DATE RANGE: 2007-01-03 00:00:00 → 2025-11-26 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float64, nulls=0)
+  - high (float64, nulls=0)
+  - low (float64, nulls=0)
+  - close (float64, nulls=0)
+  - volume (int64, nulls=0)
+  - series (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_CREDIT_A.parquet
+TYPE: value_series
+ROWS: 1000
+DATE COL: date
+DATE RANGE: 2005-01-31 00:00:00 → 2025-10-31 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_CREDIT_BBB.parquet
+TYPE: value_series
+ROWS: 1000
+DATE COL: date
+DATE RANGE: 2005-01-31 00:00:00 → 2025-10-31 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_CREDIT_SPREAD_A.parquet
+TYPE: value_series
+ROWS: 36
+DATE COL: date
+DATE RANGE: 2013-05-31 00:00:00 → 2024-05-31 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_CREDIT_SPREAD_BBB.parquet
+TYPE: value_series
+ROWS: 36
+DATE COL: date
+DATE RANGE: 2013-05-31 00:00:00 → 2024-05-31 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_RBA_CASH_RATE.parquet
+TYPE: value_series
+ROWS: 3771
+DATE COL: date
+DATE RANGE: 2011-01-04 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_RBA_YIELD_10Y.parquet
+TYPE: value_series
+ROWS: 276
+DATE COL: date
+DATE RANGE: 2013-05-20 00:00:00 → 2025-05-30 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_rba/AUS_RBA_YIELD_2Y.parquet
+TYPE: value_series
+ROWS: 265
+DATE COL: date
+DATE RANGE: 2014-05-01 00:00:00 → 2025-05-30 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_CPI.parquet
+TYPE: value_series
+ROWS: 249
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-09-01 00:00:00
+FREQUENCY: monthly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_DGS10.parquet
+TYPE: value_series
+ROWS: 5451
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-24 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_DGS2.parquet
+TYPE: value_series
+ROWS: 5451
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-24 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_FEDFUNDS.parquet
+TYPE: value_series
+ROWS: 250
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-10-01 00:00:00
+FREQUENCY: monthly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_GDP.parquet
+TYPE: value_series
+ROWS: 82
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-04-01 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_PMI_MFG.parquet
+TYPE: value_series
+ROWS: 248
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-08-01 00:00:00
+FREQUENCY: monthly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_PMI_SERV.parquet
+TYPE: value_series
+ROWS: 249
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-09-01 00:00:00
+FREQUENCY: monthly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_fred/US_UNEMP.parquet
+TYPE: value_series
+ROWS: 249
+DATE COL: date
+DATE RANGE: 2005-01-01 00:00:00 → 2025-09-01 00:00:00
+FREQUENCY: monthly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLB.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLC.parquet
+TYPE: ohlc
+ROWS: 1871
+DATE COL: date
+DATE RANGE: 2018-06-19 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLE.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLF.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLI.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLK.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLP.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLRE.parquet
+TYPE: ohlc
+ROWS: 2549
+DATE COL: date
+DATE RANGE: 2015-10-08 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLU.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLV.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_sector/XLY.parquet
+TYPE: ohlc
+ROWS: 5259
+DATE COL: date
+DATE RANGE: 2005-01-03 00:00:00 → 2025-11-25 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/AGL_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/AIA_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/ALD_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/AMC_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/AMP_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/ANZ_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/APA_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/ASX_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/AZJ_AX.parquet
+TYPE: ohlc
+ROWS: 3794
+DATE COL: date
+DATE RANGE: 2010-11-22 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/BHP_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/BXB_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/CAR_AX.parquet
+TYPE: ohlc
+ROWS: 4098
+DATE COL: date
+DATE RANGE: 2009-09-10 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/CBA_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/CCP_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/COL_AX.parquet
+TYPE: ohlc
+ROWS: 1773
+DATE COL: date
+DATE RANGE: 2018-11-21 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/CPU_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/CSL_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/DMP_AX.parquet
+TYPE: ohlc
+ROWS: 5195
+DATE COL: date
+DATE RANGE: 2005-05-13 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/FMG_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/GPT_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/IAG_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/JBH_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/JHX_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/LLC_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/MGR_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/MTS_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/NAB_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/NEM_AX.parquet
+TYPE: ohlc
+ROWS: 525
+DATE COL: date
+DATE RANGE: 2023-10-27 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/NSR_AX.parquet
+TYPE: ohlc
+ROWS: 3019
+DATE COL: date
+DATE RANGE: 2013-12-19 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/ORG_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/ORI_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/QAN_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/RHC_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/RIO_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/S32_AX.parquet
+TYPE: ohlc
+ROWS: 2666
+DATE COL: date
+DATE RANGE: 2015-05-18 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/SCG_AX.parquet
+TYPE: ohlc
+ROWS: 3779
+DATE COL: date
+DATE RANGE: 2010-12-13 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/SEK_AX.parquet
+TYPE: ohlc
+ROWS: 5213
+DATE COL: date
+DATE RANGE: 2005-04-18 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/SHL_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/STO_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/SUL_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/SUN_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/TCL_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/TLS_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/TPG_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/WBC_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/WDS_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/WES_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/WOW_AX.parquet
+TYPE: ohlc
+ROWS: 5284
+DATE COL: date
+DATE RANGE: 2005-01-04 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/WTC_AX.parquet
+TYPE: ohlc
+ROWS: 2437
+DATE COL: date
+DATE RANGE: 2016-04-11 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_companies/XRO_AX.parquet
+TYPE: ohlc
+ROWS: 3301
+DATE COL: date
+DATE RANGE: 2012-11-08 00:00:00 → 2025-11-21 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - open (float32, nulls=0)
+  - high (float32, nulls=0)
+  - low (float32, nulls=0)
+  - close (float32, nulls=0)
+  - volume (float32, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_CPI_CPI.parquet
+TYPE: value_series
+ROWS: 221408
+DATE COL: date
+DATE RANGE: 2017-09-01 00:00:00 → 2025-10-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_CPI_Full.parquet
+TYPE: value_series
+ROWS: 221408
+DATE COL: date
+DATE RANGE: 2017-09-01 00:00:00 → 2025-10-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_HPI_RPPI_Full.parquet
+TYPE: value_series
+ROWS: 6372
+DATE COL: date
+DATE RANGE: 2002-01-01 00:00:00 → 2021-10-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=351)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_LF_Full.parquet
+TYPE: value_series
+ROWS: 243660
+DATE COL: date
+DATE RANGE: 2000-01-01 00:00:00 → 2025-10-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_WPI_AllSectors.parquet
+TYPE: value_series
+ROWS: 40788
+DATE COL: date
+DATE RANGE: 2000-01-01 00:00:00 → 2025-07-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/AUS_WPI_Full.parquet
+TYPE: value_series
+ROWS: 40788
+DATE COL: date
+DATE RANGE: 2000-01-01 00:00:00 → 2025-07-01 00:00:00
+FREQUENCY: daily
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_DFD_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 160
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_DFD_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 160
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_DFD_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 159
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_DFD_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 159
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M3_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M3_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GNI_M3_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 188
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 188
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 163
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 187
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 187
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_HRW_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 162
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M3_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M3_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M3_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M4_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M4_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M4_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 160
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 160
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 159
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 159
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 160
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 188
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 163
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 159
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 187
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_MKT_HRW_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 162
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 208
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 183
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 207
+DATE COL: date
+DATE RANGE: 1973-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 182
+DATE COL: date
+DATE RANGE: 1973-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M3_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M3_20_Q.parquet
+TYPE: value_series
+ROWS: 208
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PCA_M3_30_Q.parquet
+TYPE: value_series
+ROWS: 183
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 188
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 188
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 163
+DATE COL: date
+DATE RANGE: 1978-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 187
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 187
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GPM_PHW_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 162
+DATE COL: date
+DATE RANGE: 1978-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 124
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 124
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 99
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 123
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 123
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 98
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 124
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 124
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 99
+DATE COL: date
+DATE RANGE: 1994-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 123
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 123
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_GVA_MKT_PHW_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 98
+DATE COL: date
+DATE RANGE: 1994-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_HSR_M7_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_HSR_M7_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_HSR_M7_30_Q.parquet
+TYPE: value_series
+ROWS: 183
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NDP_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 208
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 183
+DATE COL: date
+DATE RANGE: 1973-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 207
+DATE COL: date
+DATE RANGE: 1973-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_NNDI_PCA_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 182
+DATE COL: date
+DATE RANGE: 1973-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M1_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M1_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M1_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M2_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M2_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RDI_M2_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RULC_LAB_98_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 135
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RULC_LAB_98_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 134
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RULC_LAB_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 135
+DATE COL: date
+DATE RANGE: 1985-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_RULC_LAB_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 134
+DATE COL: date
+DATE RANGE: 1985-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_SAV_M3_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_SAV_M3_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (int64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_SAV_M3_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M5_10_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M5_20_Q.parquet
+TYPE: value_series
+ROWS: 264
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M5_30_Q.parquet
+TYPE: value_series
+ROWS: 239
+DATE COL: date
+DATE RANGE: 1959-09-30 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M6_10_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M6_20_Q.parquet
+TYPE: value_series
+ROWS: 263
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2025-06-30 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)
+
+================================================================================
+FILE: /Users/ishraklatif/Documents/stock_pred/project/data/processed_abs/abs_all_series/AUS_GDP_TTR_M6_30_Q.parquet
+TYPE: value_series
+ROWS: 238
+DATE COL: date
+DATE RANGE: 1959-12-31 00:00:00 → 2019-03-31 00:00:00
+FREQUENCY: quarterly
+COLUMNS:
+  - date (datetime64[ns], nulls=0)
+  - value (float64, nulls=0)
+  - series (object, nulls=0)
+  - region (object, nulls=0)
+  - source (object, nulls=0)

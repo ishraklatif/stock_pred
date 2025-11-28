@@ -1,0 +1,1082 @@
+=== INSPECT ABS SKIPPED FILES ===
+
+
+--- AUS_GDP_DFD_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-09-30   35.0  AUS_GDP_DFD_M5_10_Q    AUS  ABS_SDMX
+1 1985-12-31   35.9  AUS_GDP_DFD_M5_10_Q    AUS  ABS_SDMX
+2 1986-03-31   36.6  AUS_GDP_DFD_M5_10_Q    AUS  ABS_SDMX
+3 1986-06-30   37.0  AUS_GDP_DFD_M5_10_Q    AUS  ABS_SDMX
+4 1986-09-30   38.0  AUS_GDP_DFD_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_DFD_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-09-30   35.0  AUS_GDP_DFD_M5_20_Q    AUS  ABS_SDMX
+1 1985-12-31   35.9  AUS_GDP_DFD_M5_20_Q    AUS  ABS_SDMX
+2 1986-03-31   36.6  AUS_GDP_DFD_M5_20_Q    AUS  ABS_SDMX
+3 1986-06-30   37.0  AUS_GDP_DFD_M5_20_Q    AUS  ABS_SDMX
+4 1986-09-30   38.0  AUS_GDP_DFD_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_DFD_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-12-31    2.3  AUS_GDP_DFD_M6_10_Q    AUS  ABS_SDMX
+1 1986-03-31    2.0  AUS_GDP_DFD_M6_10_Q    AUS  ABS_SDMX
+2 1986-06-30    1.2  AUS_GDP_DFD_M6_10_Q    AUS  ABS_SDMX
+3 1986-09-30    2.6  AUS_GDP_DFD_M6_10_Q    AUS  ABS_SDMX
+4 1986-12-31    2.4  AUS_GDP_DFD_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_DFD_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-12-31    2.3  AUS_GDP_DFD_M6_20_Q    AUS  ABS_SDMX
+1 1986-03-31    2.0  AUS_GDP_DFD_M6_20_Q    AUS  ABS_SDMX
+2 1986-06-30    1.2  AUS_GDP_DFD_M6_20_Q    AUS  ABS_SDMX
+3 1986-09-30    2.6  AUS_GDP_DFD_M6_20_Q    AUS  ABS_SDMX
+4 1986-12-31    2.4  AUS_GDP_DFD_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  65442  AUS_GDP_GNI_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31  74512  AUS_GDP_GNI_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31  65491  AUS_GDP_GNI_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30  68222  AUS_GDP_GNI_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30  69357  AUS_GDP_GNI_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  66714  AUS_GDP_GNI_M1_20_Q    AUS  ABS_SDMX
+1 1959-12-31  67639  AUS_GDP_GNI_M1_20_Q    AUS  ABS_SDMX
+2 1960-03-31  68684  AUS_GDP_GNI_M1_20_Q    AUS  ABS_SDMX
+3 1960-06-30  70630  AUS_GDP_GNI_M1_20_Q    AUS  ABS_SDMX
+4 1960-09-30  70132  AUS_GDP_GNI_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value               series region    source
+0 1959-09-30  66586.0  AUS_GDP_GNI_M1_30_Q    AUS  ABS_SDMX
+1 1959-12-31  67758.0  AUS_GDP_GNI_M1_30_Q    AUS  ABS_SDMX
+2 1960-03-31  68953.0  AUS_GDP_GNI_M1_30_Q    AUS  ABS_SDMX
+3 1960-06-30  70001.0  AUS_GDP_GNI_M1_30_Q    AUS  ABS_SDMX
+4 1960-09-30  70512.0  AUS_GDP_GNI_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   13.9  AUS_GDP_GNI_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -12.1  AUS_GDP_GNI_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    4.2  AUS_GDP_GNI_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    1.7  AUS_GDP_GNI_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   11.2  AUS_GDP_GNI_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.4  AUS_GDP_GNI_M2_20_Q    AUS  ABS_SDMX
+1 1960-03-31    1.5  AUS_GDP_GNI_M2_20_Q    AUS  ABS_SDMX
+2 1960-06-30    2.8  AUS_GDP_GNI_M2_20_Q    AUS  ABS_SDMX
+3 1960-09-30   -0.7  AUS_GDP_GNI_M2_20_Q    AUS  ABS_SDMX
+4 1960-12-31    0.5  AUS_GDP_GNI_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.8  AUS_GDP_GNI_M2_30_Q    AUS  ABS_SDMX
+1 1960-03-31    1.8  AUS_GDP_GNI_M2_30_Q    AUS  ABS_SDMX
+2 1960-06-30    1.5  AUS_GDP_GNI_M2_30_Q    AUS  ABS_SDMX
+3 1960-09-30    0.7  AUS_GDP_GNI_M2_30_Q    AUS  ABS_SDMX
+4 1960-12-31   -0.3  AUS_GDP_GNI_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M3_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   4112  AUS_GDP_GNI_M3_10_Q    AUS  ABS_SDMX
+1 1959-12-31   4549  AUS_GDP_GNI_M3_10_Q    AUS  ABS_SDMX
+2 1960-03-31   3917  AUS_GDP_GNI_M3_10_Q    AUS  ABS_SDMX
+3 1960-06-30   4063  AUS_GDP_GNI_M3_10_Q    AUS  ABS_SDMX
+4 1960-09-30   4442  AUS_GDP_GNI_M3_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M3_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   4007  AUS_GDP_GNI_M3_20_Q    AUS  ABS_SDMX
+1 1959-12-31   4099  AUS_GDP_GNI_M3_20_Q    AUS  ABS_SDMX
+2 1960-03-31   4176  AUS_GDP_GNI_M3_20_Q    AUS  ABS_SDMX
+3 1960-06-30   4312  AUS_GDP_GNI_M3_20_Q    AUS  ABS_SDMX
+4 1960-09-30   4400  AUS_GDP_GNI_M3_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GNI_M3_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value               series region    source
+0 1959-09-30  4002.0  AUS_GDP_GNI_M3_30_Q    AUS  ABS_SDMX
+1 1959-12-31  4095.0  AUS_GDP_GNI_M3_30_Q    AUS  ABS_SDMX
+2 1960-03-31  4196.0  AUS_GDP_GNI_M3_30_Q    AUS  ABS_SDMX
+3 1960-06-30  4307.0  AUS_GDP_GNI_M3_30_Q    AUS  ABS_SDMX
+4 1960-09-30  4395.0  AUS_GDP_GNI_M3_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   48.1  AUS_GDP_GPM_HRW_M5_10_Q    AUS  ABS_SDMX
+1 1978-12-31   48.1  AUS_GDP_GPM_HRW_M5_10_Q    AUS  ABS_SDMX
+2 1979-03-31   48.8  AUS_GDP_GPM_HRW_M5_10_Q    AUS  ABS_SDMX
+3 1979-06-30   48.6  AUS_GDP_GPM_HRW_M5_10_Q    AUS  ABS_SDMX
+4 1979-09-30   49.6  AUS_GDP_GPM_HRW_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   47.9  AUS_GDP_GPM_HRW_M5_20_Q    AUS  ABS_SDMX
+1 1978-12-31   47.9  AUS_GDP_GPM_HRW_M5_20_Q    AUS  ABS_SDMX
+2 1979-03-31   48.2  AUS_GDP_GPM_HRW_M5_20_Q    AUS  ABS_SDMX
+3 1979-06-30   49.1  AUS_GDP_GPM_HRW_M5_20_Q    AUS  ABS_SDMX
+4 1979-09-30   48.8  AUS_GDP_GPM_HRW_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   47.8  AUS_GDP_GPM_HRW_M5_30_Q    AUS  ABS_SDMX
+1 1978-12-31   48.1  AUS_GDP_GPM_HRW_M5_30_Q    AUS  ABS_SDMX
+2 1979-03-31   48.4  AUS_GDP_GPM_HRW_M5_30_Q    AUS  ABS_SDMX
+3 1979-06-30   48.8  AUS_GDP_GPM_HRW_M5_30_Q    AUS  ABS_SDMX
+4 1979-09-30   49.0  AUS_GDP_GPM_HRW_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31   -0.1  AUS_GDP_GPM_HRW_M6_10_Q    AUS  ABS_SDMX
+1 1979-03-31    1.4  AUS_GDP_GPM_HRW_M6_10_Q    AUS  ABS_SDMX
+2 1979-06-30   -0.3  AUS_GDP_GPM_HRW_M6_10_Q    AUS  ABS_SDMX
+3 1979-09-30    2.1  AUS_GDP_GPM_HRW_M6_10_Q    AUS  ABS_SDMX
+4 1979-12-31    0.8  AUS_GDP_GPM_HRW_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31    0.2  AUS_GDP_GPM_HRW_M6_20_Q    AUS  ABS_SDMX
+1 1979-03-31    0.5  AUS_GDP_GPM_HRW_M6_20_Q    AUS  ABS_SDMX
+2 1979-06-30    2.0  AUS_GDP_GPM_HRW_M6_20_Q    AUS  ABS_SDMX
+3 1979-09-30   -0.7  AUS_GDP_GPM_HRW_M6_20_Q    AUS  ABS_SDMX
+4 1979-12-31    0.9  AUS_GDP_GPM_HRW_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_HRW_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31    0.6  AUS_GDP_GPM_HRW_M6_30_Q    AUS  ABS_SDMX
+1 1979-03-31    0.7  AUS_GDP_GPM_HRW_M6_30_Q    AUS  ABS_SDMX
+2 1979-06-30    0.7  AUS_GDP_GPM_HRW_M6_30_Q    AUS  ABS_SDMX
+3 1979-09-30    0.5  AUS_GDP_GPM_HRW_M6_30_Q    AUS  ABS_SDMX
+4 1979-12-31    0.5  AUS_GDP_GPM_HRW_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  76703  AUS_GDP_GPM_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31  87355  AUS_GDP_GPM_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31  76525  AUS_GDP_GPM_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30  79318  AUS_GDP_GPM_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30  80902  AUS_GDP_GPM_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  78679  AUS_GDP_GPM_M1_20_Q    AUS  ABS_SDMX
+1 1959-12-31  79412  AUS_GDP_GPM_M1_20_Q    AUS  ABS_SDMX
+2 1960-03-31  79810  AUS_GDP_GPM_M1_20_Q    AUS  ABS_SDMX
+3 1960-06-30  81999  AUS_GDP_GPM_M1_20_Q    AUS  ABS_SDMX
+4 1960-09-30  82177  AUS_GDP_GPM_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value               series region    source
+0 1959-09-30  78511.0  AUS_GDP_GPM_M1_30_Q    AUS  ABS_SDMX
+1 1959-12-31  79357.0  AUS_GDP_GPM_M1_30_Q    AUS  ABS_SDMX
+2 1960-03-31  80383.0  AUS_GDP_GPM_M1_30_Q    AUS  ABS_SDMX
+3 1960-06-30  81436.0  AUS_GDP_GPM_M1_30_Q    AUS  ABS_SDMX
+4 1960-09-30  82155.0  AUS_GDP_GPM_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   13.9  AUS_GDP_GPM_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -12.4  AUS_GDP_GPM_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    3.6  AUS_GDP_GPM_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    2.0  AUS_GDP_GPM_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   10.9  AUS_GDP_GPM_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    0.9  AUS_GDP_GPM_M2_20_Q    AUS  ABS_SDMX
+1 1960-03-31    0.5  AUS_GDP_GPM_M2_20_Q    AUS  ABS_SDMX
+2 1960-06-30    2.7  AUS_GDP_GPM_M2_20_Q    AUS  ABS_SDMX
+3 1960-09-30    0.2  AUS_GDP_GPM_M2_20_Q    AUS  ABS_SDMX
+4 1960-12-31   -0.2  AUS_GDP_GPM_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.1  AUS_GDP_GPM_M2_30_Q    AUS  ABS_SDMX
+1 1960-03-31    1.3  AUS_GDP_GPM_M2_30_Q    AUS  ABS_SDMX
+2 1960-06-30    1.3  AUS_GDP_GPM_M2_30_Q    AUS  ABS_SDMX
+3 1960-09-30    0.9  AUS_GDP_GPM_M2_30_Q    AUS  ABS_SDMX
+4 1960-12-31    0.2  AUS_GDP_GPM_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M3_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   4006  AUS_GDP_GPM_M3_10_Q    AUS  ABS_SDMX
+1 1959-12-31   4497  AUS_GDP_GPM_M3_10_Q    AUS  ABS_SDMX
+2 1960-03-31   3928  AUS_GDP_GPM_M3_10_Q    AUS  ABS_SDMX
+3 1960-06-30   4182  AUS_GDP_GPM_M3_10_Q    AUS  ABS_SDMX
+4 1960-09-30   4339  AUS_GDP_GPM_M3_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M3_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   3972  AUS_GDP_GPM_M3_20_Q    AUS  ABS_SDMX
+1 1959-12-31   4088  AUS_GDP_GPM_M3_20_Q    AUS  ABS_SDMX
+2 1960-03-31   4166  AUS_GDP_GPM_M3_20_Q    AUS  ABS_SDMX
+3 1960-06-30   4378  AUS_GDP_GPM_M3_20_Q    AUS  ABS_SDMX
+4 1960-09-30   4400  AUS_GDP_GPM_M3_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M3_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value               series region    source
+0 1959-09-30  3967.0  AUS_GDP_GPM_M3_30_Q    AUS  ABS_SDMX
+1 1959-12-31  4075.0  AUS_GDP_GPM_M3_30_Q    AUS  ABS_SDMX
+2 1960-03-31  4215.0  AUS_GDP_GPM_M3_30_Q    AUS  ABS_SDMX
+3 1960-06-30  4330.0  AUS_GDP_GPM_M3_30_Q    AUS  ABS_SDMX
+4 1960-09-30  4412.0  AUS_GDP_GPM_M3_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M4_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   12.3  AUS_GDP_GPM_M4_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -12.6  AUS_GDP_GPM_M4_10_Q    AUS  ABS_SDMX
+2 1960-06-30    6.4  AUS_GDP_GPM_M4_10_Q    AUS  ABS_SDMX
+3 1960-09-30    3.8  AUS_GDP_GPM_M4_10_Q    AUS  ABS_SDMX
+4 1960-12-31   12.2  AUS_GDP_GPM_M4_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M4_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    2.9  AUS_GDP_GPM_M4_20_Q    AUS  ABS_SDMX
+1 1960-03-31    1.9  AUS_GDP_GPM_M4_20_Q    AUS  ABS_SDMX
+2 1960-06-30    5.1  AUS_GDP_GPM_M4_20_Q    AUS  ABS_SDMX
+3 1960-09-30    0.5  AUS_GDP_GPM_M4_20_Q    AUS  ABS_SDMX
+4 1960-12-31    0.6  AUS_GDP_GPM_M4_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M4_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    2.7  AUS_GDP_GPM_M4_30_Q    AUS  ABS_SDMX
+1 1960-03-31    3.4  AUS_GDP_GPM_M4_30_Q    AUS  ABS_SDMX
+2 1960-06-30    2.7  AUS_GDP_GPM_M4_30_Q    AUS  ABS_SDMX
+3 1960-09-30    1.9  AUS_GDP_GPM_M4_30_Q    AUS  ABS_SDMX
+4 1960-12-31    0.4  AUS_GDP_GPM_M4_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-09-30   29.9  AUS_GDP_GPM_M5_10_Q    AUS  ABS_SDMX
+1 1985-12-31   30.3  AUS_GDP_GPM_M5_10_Q    AUS  ABS_SDMX
+2 1986-03-31   30.9  AUS_GDP_GPM_M5_10_Q    AUS  ABS_SDMX
+3 1986-06-30   31.3  AUS_GDP_GPM_M5_10_Q    AUS  ABS_SDMX
+4 1986-09-30   31.6  AUS_GDP_GPM_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-09-30   29.9  AUS_GDP_GPM_M5_20_Q    AUS  ABS_SDMX
+1 1985-12-31   30.3  AUS_GDP_GPM_M5_20_Q    AUS  ABS_SDMX
+2 1986-03-31   30.9  AUS_GDP_GPM_M5_20_Q    AUS  ABS_SDMX
+3 1986-06-30   31.3  AUS_GDP_GPM_M5_20_Q    AUS  ABS_SDMX
+4 1986-09-30   31.6  AUS_GDP_GPM_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-12-31    1.3  AUS_GDP_GPM_M6_10_Q    AUS  ABS_SDMX
+1 1986-03-31    2.0  AUS_GDP_GPM_M6_10_Q    AUS  ABS_SDMX
+2 1986-06-30    1.2  AUS_GDP_GPM_M6_10_Q    AUS  ABS_SDMX
+3 1986-09-30    1.1  AUS_GDP_GPM_M6_10_Q    AUS  ABS_SDMX
+4 1986-12-31    2.7  AUS_GDP_GPM_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1985-12-31    1.3  AUS_GDP_GPM_M6_20_Q    AUS  ABS_SDMX
+1 1986-03-31    2.0  AUS_GDP_GPM_M6_20_Q    AUS  ABS_SDMX
+2 1986-06-30    1.2  AUS_GDP_GPM_M6_20_Q    AUS  ABS_SDMX
+3 1986-09-30    1.1  AUS_GDP_GPM_M6_20_Q    AUS  ABS_SDMX
+4 1986-12-31    2.7  AUS_GDP_GPM_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1985-09-30   57.8  AUS_GDP_GPM_MKT_HRW_M5_10_Q    AUS  ABS_SDMX
+1 1985-12-31   59.1  AUS_GDP_GPM_MKT_HRW_M5_10_Q    AUS  ABS_SDMX
+2 1986-03-31   59.9  AUS_GDP_GPM_MKT_HRW_M5_10_Q    AUS  ABS_SDMX
+3 1986-06-30   58.7  AUS_GDP_GPM_MKT_HRW_M5_10_Q    AUS  ABS_SDMX
+4 1986-09-30   59.3  AUS_GDP_GPM_MKT_HRW_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1978-09-30   53.2  AUS_GDP_GPM_MKT_HRW_M5_20_Q    AUS  ABS_SDMX
+1 1978-12-31   53.1  AUS_GDP_GPM_MKT_HRW_M5_20_Q    AUS  ABS_SDMX
+2 1979-03-31   53.3  AUS_GDP_GPM_MKT_HRW_M5_20_Q    AUS  ABS_SDMX
+3 1979-06-30   54.8  AUS_GDP_GPM_MKT_HRW_M5_20_Q    AUS  ABS_SDMX
+4 1979-09-30   54.3  AUS_GDP_GPM_MKT_HRW_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1978-09-30   52.9  AUS_GDP_GPM_MKT_HRW_M5_30_Q    AUS  ABS_SDMX
+1 1978-12-31   53.3  AUS_GDP_GPM_MKT_HRW_M5_30_Q    AUS  ABS_SDMX
+2 1979-03-31   53.7  AUS_GDP_GPM_MKT_HRW_M5_30_Q    AUS  ABS_SDMX
+3 1979-06-30   54.2  AUS_GDP_GPM_MKT_HRW_M5_30_Q    AUS  ABS_SDMX
+4 1979-09-30   54.5  AUS_GDP_GPM_MKT_HRW_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1985-12-31    2.2  AUS_GDP_GPM_MKT_HRW_M6_10_Q    AUS  ABS_SDMX
+1 1986-03-31    1.5  AUS_GDP_GPM_MKT_HRW_M6_10_Q    AUS  ABS_SDMX
+2 1986-06-30   -2.1  AUS_GDP_GPM_MKT_HRW_M6_10_Q    AUS  ABS_SDMX
+3 1986-09-30    1.0  AUS_GDP_GPM_MKT_HRW_M6_10_Q    AUS  ABS_SDMX
+4 1986-12-31    1.3  AUS_GDP_GPM_MKT_HRW_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1978-12-31    0.0  AUS_GDP_GPM_MKT_HRW_M6_20_Q    AUS  ABS_SDMX
+1 1979-03-31    0.4  AUS_GDP_GPM_MKT_HRW_M6_20_Q    AUS  ABS_SDMX
+2 1979-06-30    2.7  AUS_GDP_GPM_MKT_HRW_M6_20_Q    AUS  ABS_SDMX
+3 1979-09-30   -1.0  AUS_GDP_GPM_MKT_HRW_M6_20_Q    AUS  ABS_SDMX
+4 1979-12-31    0.8  AUS_GDP_GPM_MKT_HRW_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_MKT_HRW_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1978-12-31    0.7  AUS_GDP_GPM_MKT_HRW_M6_30_Q    AUS  ABS_SDMX
+1 1979-03-31    0.9  AUS_GDP_GPM_MKT_HRW_M6_30_Q    AUS  ABS_SDMX
+2 1979-06-30    0.9  AUS_GDP_GPM_MKT_HRW_M6_30_Q    AUS  ABS_SDMX
+3 1979-09-30    0.6  AUS_GDP_GPM_MKT_HRW_M6_30_Q    AUS  ABS_SDMX
+4 1979-12-31    0.4  AUS_GDP_GPM_MKT_HRW_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1959-09-30   7589  AUS_GDP_GPM_PCA_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31   8597  AUS_GDP_GPM_PCA_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31   7489  AUS_GDP_GPM_PCA_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30   7718  AUS_GDP_GPM_PCA_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30   7829  AUS_GDP_GPM_PCA_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1973-09-30  11020  AUS_GDP_GPM_PCA_M1_20_Q    AUS  ABS_SDMX
+1 1973-12-31  11251  AUS_GDP_GPM_PCA_M1_20_Q    AUS  ABS_SDMX
+2 1974-03-31  11208  AUS_GDP_GPM_PCA_M1_20_Q    AUS  ABS_SDMX
+3 1974-06-30  10936  AUS_GDP_GPM_PCA_M1_20_Q    AUS  ABS_SDMX
+4 1974-09-30  11023  AUS_GDP_GPM_PCA_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value                   series region    source
+0 1973-09-30  11098.0  AUS_GDP_GPM_PCA_M1_30_Q    AUS  ABS_SDMX
+1 1973-12-31  11164.0  AUS_GDP_GPM_PCA_M1_30_Q    AUS  ABS_SDMX
+2 1974-03-31  11147.0  AUS_GDP_GPM_PCA_M1_30_Q    AUS  ABS_SDMX
+3 1974-06-30  11054.0  AUS_GDP_GPM_PCA_M1_30_Q    AUS  ABS_SDMX
+4 1974-09-30  10967.0  AUS_GDP_GPM_PCA_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1959-12-31   13.3  AUS_GDP_GPM_PCA_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -12.9  AUS_GDP_GPM_PCA_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    3.1  AUS_GDP_GPM_PCA_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    1.4  AUS_GDP_GPM_PCA_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   10.3  AUS_GDP_GPM_PCA_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1973-12-31    2.1  AUS_GDP_GPM_PCA_M2_20_Q    AUS  ABS_SDMX
+1 1974-03-31   -0.4  AUS_GDP_GPM_PCA_M2_20_Q    AUS  ABS_SDMX
+2 1974-06-30   -2.4  AUS_GDP_GPM_PCA_M2_20_Q    AUS  ABS_SDMX
+3 1974-09-30    0.8  AUS_GDP_GPM_PCA_M2_20_Q    AUS  ABS_SDMX
+4 1974-12-31   -0.3  AUS_GDP_GPM_PCA_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1973-12-31    0.6  AUS_GDP_GPM_PCA_M2_30_Q    AUS  ABS_SDMX
+1 1974-03-31   -0.2  AUS_GDP_GPM_PCA_M2_30_Q    AUS  ABS_SDMX
+2 1974-06-30   -0.8  AUS_GDP_GPM_PCA_M2_30_Q    AUS  ABS_SDMX
+3 1974-09-30   -0.8  AUS_GDP_GPM_PCA_M2_30_Q    AUS  ABS_SDMX
+4 1974-12-31    0.3  AUS_GDP_GPM_PCA_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M3_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1959-09-30    396  AUS_GDP_GPM_PCA_M3_10_Q    AUS  ABS_SDMX
+1 1959-12-31    443  AUS_GDP_GPM_PCA_M3_10_Q    AUS  ABS_SDMX
+2 1960-03-31    384  AUS_GDP_GPM_PCA_M3_10_Q    AUS  ABS_SDMX
+3 1960-06-30    407  AUS_GDP_GPM_PCA_M3_10_Q    AUS  ABS_SDMX
+4 1960-09-30    420  AUS_GDP_GPM_PCA_M3_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M3_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1973-09-30   1035  AUS_GDP_GPM_PCA_M3_20_Q    AUS  ABS_SDMX
+1 1973-12-31   1100  AUS_GDP_GPM_PCA_M3_20_Q    AUS  ABS_SDMX
+2 1974-03-31   1134  AUS_GDP_GPM_PCA_M3_20_Q    AUS  ABS_SDMX
+3 1974-06-30   1149  AUS_GDP_GPM_PCA_M3_20_Q    AUS  ABS_SDMX
+4 1974-09-30   1216  AUS_GDP_GPM_PCA_M3_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PCA_M3_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value                   series region    source
+0 1973-09-30  1041.0  AUS_GDP_GPM_PCA_M3_30_Q    AUS  ABS_SDMX
+1 1973-12-31  1089.0  AUS_GDP_GPM_PCA_M3_30_Q    AUS  ABS_SDMX
+2 1974-03-31  1128.0  AUS_GDP_GPM_PCA_M3_30_Q    AUS  ABS_SDMX
+3 1974-06-30  1167.0  AUS_GDP_GPM_PCA_M3_30_Q    AUS  ABS_SDMX
+4 1974-09-30  1213.0  AUS_GDP_GPM_PCA_M3_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   53.3  AUS_GDP_GPM_PHW_M5_10_Q    AUS  ABS_SDMX
+1 1978-12-31   59.9  AUS_GDP_GPM_PHW_M5_10_Q    AUS  ABS_SDMX
+2 1979-03-31   53.5  AUS_GDP_GPM_PHW_M5_10_Q    AUS  ABS_SDMX
+3 1979-06-30   53.8  AUS_GDP_GPM_PHW_M5_10_Q    AUS  ABS_SDMX
+4 1979-09-30   53.5  AUS_GDP_GPM_PHW_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   54.9  AUS_GDP_GPM_PHW_M5_20_Q    AUS  ABS_SDMX
+1 1978-12-31   55.2  AUS_GDP_GPM_PHW_M5_20_Q    AUS  ABS_SDMX
+2 1979-03-31   56.5  AUS_GDP_GPM_PHW_M5_20_Q    AUS  ABS_SDMX
+3 1979-06-30   54.5  AUS_GDP_GPM_PHW_M5_20_Q    AUS  ABS_SDMX
+4 1979-09-30   55.4  AUS_GDP_GPM_PHW_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-09-30   54.9  AUS_GDP_GPM_PHW_M5_30_Q    AUS  ABS_SDMX
+1 1978-12-31   55.4  AUS_GDP_GPM_PHW_M5_30_Q    AUS  ABS_SDMX
+2 1979-03-31   55.4  AUS_GDP_GPM_PHW_M5_30_Q    AUS  ABS_SDMX
+3 1979-06-30   55.3  AUS_GDP_GPM_PHW_M5_30_Q    AUS  ABS_SDMX
+4 1979-09-30   55.3  AUS_GDP_GPM_PHW_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31   12.5  AUS_GDP_GPM_PHW_M6_10_Q    AUS  ABS_SDMX
+1 1979-03-31  -10.6  AUS_GDP_GPM_PHW_M6_10_Q    AUS  ABS_SDMX
+2 1979-06-30    0.5  AUS_GDP_GPM_PHW_M6_10_Q    AUS  ABS_SDMX
+3 1979-09-30   -0.7  AUS_GDP_GPM_PHW_M6_10_Q    AUS  ABS_SDMX
+4 1979-12-31   12.5  AUS_GDP_GPM_PHW_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31    0.6  AUS_GDP_GPM_PHW_M6_20_Q    AUS  ABS_SDMX
+1 1979-03-31    2.3  AUS_GDP_GPM_PHW_M6_20_Q    AUS  ABS_SDMX
+2 1979-06-30   -3.5  AUS_GDP_GPM_PHW_M6_20_Q    AUS  ABS_SDMX
+3 1979-09-30    1.6  AUS_GDP_GPM_PHW_M6_20_Q    AUS  ABS_SDMX
+4 1979-12-31    1.0  AUS_GDP_GPM_PHW_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GPM_PHW_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1978-12-31    0.8  AUS_GDP_GPM_PHW_M6_30_Q    AUS  ABS_SDMX
+1 1979-03-31    0.1  AUS_GDP_GPM_PHW_M6_30_Q    AUS  ABS_SDMX
+2 1979-06-30   -0.3  AUS_GDP_GPM_PHW_M6_30_Q    AUS  ABS_SDMX
+3 1979-09-30    0.1  AUS_GDP_GPM_PHW_M6_30_Q    AUS  ABS_SDMX
+4 1979-12-31    0.4  AUS_GDP_GPM_PHW_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value                   series region    source
+0 1994-09-30  182058  AUS_GDP_GVA_MKT_M1_10_Q    AUS  ABS_SDMX
+1 1994-12-31  193425  AUS_GDP_GVA_MKT_M1_10_Q    AUS  ABS_SDMX
+2 1995-03-31  178583  AUS_GDP_GVA_MKT_M1_10_Q    AUS  ABS_SDMX
+3 1995-06-30  186326  AUS_GDP_GVA_MKT_M1_10_Q    AUS  ABS_SDMX
+4 1995-09-30  190639  AUS_GDP_GVA_MKT_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value                   series region    source
+0 1994-09-30  181588  AUS_GDP_GVA_MKT_M1_20_Q    AUS  ABS_SDMX
+1 1994-12-31  184457  AUS_GDP_GVA_MKT_M1_20_Q    AUS  ABS_SDMX
+2 1995-03-31  185178  AUS_GDP_GVA_MKT_M1_20_Q    AUS  ABS_SDMX
+3 1995-06-30  189170  AUS_GDP_GVA_MKT_M1_20_Q    AUS  ABS_SDMX
+4 1995-09-30  191490  AUS_GDP_GVA_MKT_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date     value                   series region    source
+0 1994-09-30  181680.0  AUS_GDP_GVA_MKT_M1_30_Q    AUS  ABS_SDMX
+1 1994-12-31  183832.0  AUS_GDP_GVA_MKT_M1_30_Q    AUS  ABS_SDMX
+2 1995-03-31  186183.0  AUS_GDP_GVA_MKT_M1_30_Q    AUS  ABS_SDMX
+3 1995-06-30  188776.0  AUS_GDP_GVA_MKT_M1_30_Q    AUS  ABS_SDMX
+4 1995-09-30  191278.0  AUS_GDP_GVA_MKT_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1994-12-31    6.2  AUS_GDP_GVA_MKT_M2_10_Q    AUS  ABS_SDMX
+1 1995-03-31   -7.7  AUS_GDP_GVA_MKT_M2_10_Q    AUS  ABS_SDMX
+2 1995-06-30    4.3  AUS_GDP_GVA_MKT_M2_10_Q    AUS  ABS_SDMX
+3 1995-09-30    2.3  AUS_GDP_GVA_MKT_M2_10_Q    AUS  ABS_SDMX
+4 1995-12-31    7.6  AUS_GDP_GVA_MKT_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1994-12-31    1.6  AUS_GDP_GVA_MKT_M2_20_Q    AUS  ABS_SDMX
+1 1995-03-31    0.4  AUS_GDP_GVA_MKT_M2_20_Q    AUS  ABS_SDMX
+2 1995-06-30    2.2  AUS_GDP_GVA_MKT_M2_20_Q    AUS  ABS_SDMX
+3 1995-09-30    1.2  AUS_GDP_GVA_MKT_M2_20_Q    AUS  ABS_SDMX
+4 1995-12-31    0.8  AUS_GDP_GVA_MKT_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                   series region    source
+0 1994-12-31    1.2  AUS_GDP_GVA_MKT_M2_30_Q    AUS  ABS_SDMX
+1 1995-03-31    1.3  AUS_GDP_GVA_MKT_M2_30_Q    AUS  ABS_SDMX
+2 1995-06-30    1.4  AUS_GDP_GVA_MKT_M2_30_Q    AUS  ABS_SDMX
+3 1995-09-30    1.3  AUS_GDP_GVA_MKT_M2_30_Q    AUS  ABS_SDMX
+4 1995-12-31    0.9  AUS_GDP_GVA_MKT_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-09-30   61.1  AUS_GDP_GVA_MKT_PHW_M5_10_Q    AUS  ABS_SDMX
+1 1994-12-31   63.6  AUS_GDP_GVA_MKT_PHW_M5_10_Q    AUS  ABS_SDMX
+2 1995-03-31   61.9  AUS_GDP_GVA_MKT_PHW_M5_10_Q    AUS  ABS_SDMX
+3 1995-06-30   60.2  AUS_GDP_GVA_MKT_PHW_M5_10_Q    AUS  ABS_SDMX
+4 1995-09-30   61.9  AUS_GDP_GVA_MKT_PHW_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-09-30   61.1  AUS_GDP_GVA_MKT_PHW_M5_20_Q    AUS  ABS_SDMX
+1 1994-12-31   62.0  AUS_GDP_GVA_MKT_PHW_M5_20_Q    AUS  ABS_SDMX
+2 1995-03-31   61.5  AUS_GDP_GVA_MKT_PHW_M5_20_Q    AUS  ABS_SDMX
+3 1995-06-30   62.0  AUS_GDP_GVA_MKT_PHW_M5_20_Q    AUS  ABS_SDMX
+4 1995-09-30   62.4  AUS_GDP_GVA_MKT_PHW_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-09-30   61.5  AUS_GDP_GVA_MKT_PHW_M5_30_Q    AUS  ABS_SDMX
+1 1994-12-31   61.5  AUS_GDP_GVA_MKT_PHW_M5_30_Q    AUS  ABS_SDMX
+2 1995-03-31   61.7  AUS_GDP_GVA_MKT_PHW_M5_30_Q    AUS  ABS_SDMX
+3 1995-06-30   62.0  AUS_GDP_GVA_MKT_PHW_M5_30_Q    AUS  ABS_SDMX
+4 1995-09-30   62.3  AUS_GDP_GVA_MKT_PHW_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-12-31    4.0  AUS_GDP_GVA_MKT_PHW_M6_10_Q    AUS  ABS_SDMX
+1 1995-03-31   -2.7  AUS_GDP_GVA_MKT_PHW_M6_10_Q    AUS  ABS_SDMX
+2 1995-06-30   -2.8  AUS_GDP_GVA_MKT_PHW_M6_10_Q    AUS  ABS_SDMX
+3 1995-09-30    2.9  AUS_GDP_GVA_MKT_PHW_M6_10_Q    AUS  ABS_SDMX
+4 1995-12-31    5.5  AUS_GDP_GVA_MKT_PHW_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-12-31    1.3  AUS_GDP_GVA_MKT_PHW_M6_20_Q    AUS  ABS_SDMX
+1 1995-03-31   -0.7  AUS_GDP_GVA_MKT_PHW_M6_20_Q    AUS  ABS_SDMX
+2 1995-06-30    0.8  AUS_GDP_GVA_MKT_PHW_M6_20_Q    AUS  ABS_SDMX
+3 1995-09-30    0.6  AUS_GDP_GVA_MKT_PHW_M6_20_Q    AUS  ABS_SDMX
+4 1995-12-31    0.8  AUS_GDP_GVA_MKT_PHW_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_GVA_MKT_PHW_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1994-12-31    0.0  AUS_GDP_GVA_MKT_PHW_M6_30_Q    AUS  ABS_SDMX
+1 1995-03-31    0.3  AUS_GDP_GVA_MKT_PHW_M6_30_Q    AUS  ABS_SDMX
+2 1995-06-30    0.4  AUS_GDP_GVA_MKT_PHW_M6_30_Q    AUS  ABS_SDMX
+3 1995-09-30    0.6  AUS_GDP_GVA_MKT_PHW_M6_30_Q    AUS  ABS_SDMX
+4 1995-12-31    0.6  AUS_GDP_GVA_MKT_PHW_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_HSR_M7_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   20.7  AUS_GDP_HSR_M7_10_Q    AUS  ABS_SDMX
+1 1959-12-31   21.9  AUS_GDP_HSR_M7_10_Q    AUS  ABS_SDMX
+2 1960-03-31    9.0  AUS_GDP_HSR_M7_10_Q    AUS  ABS_SDMX
+3 1960-06-30    3.0  AUS_GDP_HSR_M7_10_Q    AUS  ABS_SDMX
+4 1960-09-30   16.5  AUS_GDP_HSR_M7_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_HSR_M7_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   15.5  AUS_GDP_HSR_M7_20_Q    AUS  ABS_SDMX
+1 1959-12-31   14.2  AUS_GDP_HSR_M7_20_Q    AUS  ABS_SDMX
+2 1960-03-31   13.3  AUS_GDP_HSR_M7_20_Q    AUS  ABS_SDMX
+3 1960-06-30   15.0  AUS_GDP_HSR_M7_20_Q    AUS  ABS_SDMX
+4 1960-09-30   12.7  AUS_GDP_HSR_M7_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_HSR_M7_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1973-09-30   18.7  AUS_GDP_HSR_M7_30_Q    AUS  ABS_SDMX
+1 1973-12-31   18.8  AUS_GDP_HSR_M7_30_Q    AUS  ABS_SDMX
+2 1974-03-31   18.6  AUS_GDP_HSR_M7_30_Q    AUS  ABS_SDMX
+3 1974-06-30   18.2  AUS_GDP_HSR_M7_30_Q    AUS  ABS_SDMX
+4 1974-09-30   18.3  AUS_GDP_HSR_M7_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  71385  AUS_GDP_NDP_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31  84141  AUS_GDP_NDP_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31  72093  AUS_GDP_NDP_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30  75428  AUS_GDP_NDP_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30  76801  AUS_GDP_NDP_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  73539  AUS_GDP_NDP_M1_20_Q    AUS  ABS_SDMX
+1 1959-12-31  75028  AUS_GDP_NDP_M1_20_Q    AUS  ABS_SDMX
+2 1960-03-31  75930  AUS_GDP_NDP_M1_20_Q    AUS  ABS_SDMX
+3 1960-06-30  78551  AUS_GDP_NDP_M1_20_Q    AUS  ABS_SDMX
+4 1960-09-30  78287  AUS_GDP_NDP_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value               series region    source
+0 1959-09-30  73497.0  AUS_GDP_NDP_M1_30_Q    AUS  ABS_SDMX
+1 1959-12-31  74944.0  AUS_GDP_NDP_M1_30_Q    AUS  ABS_SDMX
+2 1960-03-31  76495.0  AUS_GDP_NDP_M1_30_Q    AUS  ABS_SDMX
+3 1960-06-30  77809.0  AUS_GDP_NDP_M1_30_Q    AUS  ABS_SDMX
+4 1960-09-30  78251.0  AUS_GDP_NDP_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   17.9  AUS_GDP_NDP_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -14.3  AUS_GDP_NDP_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    4.6  AUS_GDP_NDP_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    1.8  AUS_GDP_NDP_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   12.3  AUS_GDP_NDP_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    2.0  AUS_GDP_NDP_M2_20_Q    AUS  ABS_SDMX
+1 1960-03-31    1.2  AUS_GDP_NDP_M2_20_Q    AUS  ABS_SDMX
+2 1960-06-30    3.5  AUS_GDP_NDP_M2_20_Q    AUS  ABS_SDMX
+3 1960-09-30   -0.3  AUS_GDP_NDP_M2_20_Q    AUS  ABS_SDMX
+4 1960-12-31   -1.1  AUS_GDP_NDP_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NDP_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    2.0  AUS_GDP_NDP_M2_30_Q    AUS  ABS_SDMX
+1 1960-03-31    2.1  AUS_GDP_NDP_M2_30_Q    AUS  ABS_SDMX
+2 1960-06-30    1.7  AUS_GDP_NDP_M2_30_Q    AUS  ABS_SDMX
+3 1960-09-30    0.6  AUS_GDP_NDP_M2_30_Q    AUS  ABS_SDMX
+4 1960-12-31   -0.6  AUS_GDP_NDP_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                series region    source
+0 1959-09-30  59610  AUS_GDP_NNDI_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31  70391  AUS_GDP_NNDI_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31  60580  AUS_GDP_NNDI_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30  63581  AUS_GDP_NNDI_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30  64517  AUS_GDP_NNDI_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                series region    source
+0 1959-09-30  60992  AUS_GDP_NNDI_M1_20_Q    AUS  ABS_SDMX
+1 1959-12-31  62649  AUS_GDP_NNDI_M1_20_Q    AUS  ABS_SDMX
+2 1960-03-31  64178  AUS_GDP_NNDI_M1_20_Q    AUS  ABS_SDMX
+3 1960-06-30  66341  AUS_GDP_NNDI_M1_20_Q    AUS  ABS_SDMX
+4 1960-09-30  65431  AUS_GDP_NNDI_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value                series region    source
+0 1959-09-30  61021.0  AUS_GDP_NNDI_M1_30_Q    AUS  ABS_SDMX
+1 1959-12-31  62735.0  AUS_GDP_NNDI_M1_30_Q    AUS  ABS_SDMX
+2 1960-03-31  64374.0  AUS_GDP_NNDI_M1_30_Q    AUS  ABS_SDMX
+3 1960-06-30  65595.0  AUS_GDP_NNDI_M1_30_Q    AUS  ABS_SDMX
+4 1960-09-30  65818.0  AUS_GDP_NNDI_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                series region    source
+0 1959-12-31   18.1  AUS_GDP_NNDI_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -13.9  AUS_GDP_NNDI_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    5.0  AUS_GDP_NNDI_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    1.5  AUS_GDP_NNDI_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   12.6  AUS_GDP_NNDI_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                series region    source
+0 1959-12-31    2.7  AUS_GDP_NNDI_M2_20_Q    AUS  ABS_SDMX
+1 1960-03-31    2.4  AUS_GDP_NNDI_M2_20_Q    AUS  ABS_SDMX
+2 1960-06-30    3.4  AUS_GDP_NNDI_M2_20_Q    AUS  ABS_SDMX
+3 1960-09-30   -1.4  AUS_GDP_NNDI_M2_20_Q    AUS  ABS_SDMX
+4 1960-12-31   -0.4  AUS_GDP_NNDI_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                series region    source
+0 1959-12-31    2.8  AUS_GDP_NNDI_M2_30_Q    AUS  ABS_SDMX
+1 1960-03-31    2.6  AUS_GDP_NNDI_M2_30_Q    AUS  ABS_SDMX
+2 1960-06-30    1.9  AUS_GDP_NNDI_M2_30_Q    AUS  ABS_SDMX
+3 1960-09-30    0.3  AUS_GDP_NNDI_M2_30_Q    AUS  ABS_SDMX
+4 1960-12-31   -1.1  AUS_GDP_NNDI_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1959-09-30   5898  AUS_GDP_NNDI_PCA_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31   6928  AUS_GDP_NNDI_PCA_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31   5928  AUS_GDP_NNDI_PCA_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30   6187  AUS_GDP_NNDI_PCA_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30   6243  AUS_GDP_NNDI_PCA_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1973-09-30   8878  AUS_GDP_NNDI_PCA_M1_20_Q    AUS  ABS_SDMX
+1 1973-12-31   9101  AUS_GDP_NNDI_PCA_M1_20_Q    AUS  ABS_SDMX
+2 1974-03-31   9082  AUS_GDP_NNDI_PCA_M1_20_Q    AUS  ABS_SDMX
+3 1974-06-30   8683  AUS_GDP_NNDI_PCA_M1_20_Q    AUS  ABS_SDMX
+4 1974-09-30   8785  AUS_GDP_NNDI_PCA_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date   value                    series region    source
+0 1973-09-30  8981.0  AUS_GDP_NNDI_PCA_M1_30_Q    AUS  ABS_SDMX
+1 1973-12-31  9026.0  AUS_GDP_NNDI_PCA_M1_30_Q    AUS  ABS_SDMX
+2 1974-03-31  8979.0  AUS_GDP_NNDI_PCA_M1_30_Q    AUS  ABS_SDMX
+3 1974-06-30  8843.0  AUS_GDP_NNDI_PCA_M1_30_Q    AUS  ABS_SDMX
+4 1974-09-30  8703.0  AUS_GDP_NNDI_PCA_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1959-12-31   17.5  AUS_GDP_NNDI_PCA_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -14.4  AUS_GDP_NNDI_PCA_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    4.4  AUS_GDP_NNDI_PCA_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    0.9  AUS_GDP_NNDI_PCA_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   12.0  AUS_GDP_NNDI_PCA_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1973-12-31    2.5  AUS_GDP_NNDI_PCA_M2_20_Q    AUS  ABS_SDMX
+1 1974-03-31   -0.2  AUS_GDP_NNDI_PCA_M2_20_Q    AUS  ABS_SDMX
+2 1974-06-30   -4.4  AUS_GDP_NNDI_PCA_M2_20_Q    AUS  ABS_SDMX
+3 1974-09-30    1.2  AUS_GDP_NNDI_PCA_M2_20_Q    AUS  ABS_SDMX
+4 1974-12-31   -1.4  AUS_GDP_NNDI_PCA_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_NNDI_PCA_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1973-12-31    0.5  AUS_GDP_NNDI_PCA_M2_30_Q    AUS  ABS_SDMX
+1 1974-03-31   -0.5  AUS_GDP_NNDI_PCA_M2_30_Q    AUS  ABS_SDMX
+2 1974-06-30   -1.5  AUS_GDP_NNDI_PCA_M2_30_Q    AUS  ABS_SDMX
+3 1974-09-30   -1.6  AUS_GDP_NNDI_PCA_M2_30_Q    AUS  ABS_SDMX
+4 1974-12-31   -0.2  AUS_GDP_NNDI_PCA_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M1_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  66470  AUS_GDP_RDI_M1_10_Q    AUS  ABS_SDMX
+1 1959-12-31  75648  AUS_GDP_RDI_M1_10_Q    AUS  ABS_SDMX
+2 1960-03-31  66561  AUS_GDP_RDI_M1_10_Q    AUS  ABS_SDMX
+3 1960-06-30  69201  AUS_GDP_RDI_M1_10_Q    AUS  ABS_SDMX
+4 1960-09-30  70230  AUS_GDP_RDI_M1_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M1_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  67946  AUS_GDP_RDI_M1_20_Q    AUS  ABS_SDMX
+1 1959-12-31  68649  AUS_GDP_RDI_M1_20_Q    AUS  ABS_SDMX
+2 1960-03-31  69652  AUS_GDP_RDI_M1_20_Q    AUS  ABS_SDMX
+3 1960-06-30  71634  AUS_GDP_RDI_M1_20_Q    AUS  ABS_SDMX
+4 1960-09-30  71131  AUS_GDP_RDI_M1_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M1_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date    value               series region    source
+0 1959-09-30  67743.0  AUS_GDP_RDI_M1_30_Q    AUS  ABS_SDMX
+1 1959-12-31  68819.0  AUS_GDP_RDI_M1_30_Q    AUS  ABS_SDMX
+2 1960-03-31  69954.0  AUS_GDP_RDI_M1_30_Q    AUS  ABS_SDMX
+3 1960-06-30  70960.0  AUS_GDP_RDI_M1_30_Q    AUS  ABS_SDMX
+4 1960-09-30  71480.0  AUS_GDP_RDI_M1_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M2_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   13.8  AUS_GDP_RDI_M2_10_Q    AUS  ABS_SDMX
+1 1960-03-31  -12.0  AUS_GDP_RDI_M2_10_Q    AUS  ABS_SDMX
+2 1960-06-30    4.0  AUS_GDP_RDI_M2_10_Q    AUS  ABS_SDMX
+3 1960-09-30    1.5  AUS_GDP_RDI_M2_10_Q    AUS  ABS_SDMX
+4 1960-12-31   11.2  AUS_GDP_RDI_M2_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M2_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.0  AUS_GDP_RDI_M2_20_Q    AUS  ABS_SDMX
+1 1960-03-31    1.5  AUS_GDP_RDI_M2_20_Q    AUS  ABS_SDMX
+2 1960-06-30    2.8  AUS_GDP_RDI_M2_20_Q    AUS  ABS_SDMX
+3 1960-09-30   -0.7  AUS_GDP_RDI_M2_20_Q    AUS  ABS_SDMX
+4 1960-12-31    0.3  AUS_GDP_RDI_M2_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RDI_M2_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.6  AUS_GDP_RDI_M2_30_Q    AUS  ABS_SDMX
+1 1960-03-31    1.6  AUS_GDP_RDI_M2_30_Q    AUS  ABS_SDMX
+2 1960-06-30    1.4  AUS_GDP_RDI_M2_30_Q    AUS  ABS_SDMX
+3 1960-09-30    0.7  AUS_GDP_RDI_M2_30_Q    AUS  ABS_SDMX
+4 1960-12-31   -0.2  AUS_GDP_RDI_M2_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RULC_LAB_98_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1985-09-30  119.8  AUS_GDP_RULC_LAB_98_M5_30_Q    AUS  ABS_SDMX
+1 1985-12-31  120.0  AUS_GDP_RULC_LAB_98_M5_30_Q    AUS  ABS_SDMX
+2 1986-03-31  120.8  AUS_GDP_RULC_LAB_98_M5_30_Q    AUS  ABS_SDMX
+3 1986-06-30  121.3  AUS_GDP_RULC_LAB_98_M5_30_Q    AUS  ABS_SDMX
+4 1986-09-30  121.0  AUS_GDP_RULC_LAB_98_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RULC_LAB_98_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                       series region    source
+0 1985-12-31    0.2  AUS_GDP_RULC_LAB_98_M6_30_Q    AUS  ABS_SDMX
+1 1986-03-31    0.7  AUS_GDP_RULC_LAB_98_M6_30_Q    AUS  ABS_SDMX
+2 1986-06-30    0.4  AUS_GDP_RULC_LAB_98_M6_30_Q    AUS  ABS_SDMX
+3 1986-09-30   -0.3  AUS_GDP_RULC_LAB_98_M6_30_Q    AUS  ABS_SDMX
+4 1986-12-31   -1.2  AUS_GDP_RULC_LAB_98_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RULC_LAB_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1985-09-30  122.5  AUS_GDP_RULC_LAB_M5_30_Q    AUS  ABS_SDMX
+1 1985-12-31  124.0  AUS_GDP_RULC_LAB_M5_30_Q    AUS  ABS_SDMX
+2 1986-03-31  125.4  AUS_GDP_RULC_LAB_M5_30_Q    AUS  ABS_SDMX
+3 1986-06-30  125.7  AUS_GDP_RULC_LAB_M5_30_Q    AUS  ABS_SDMX
+4 1986-09-30  125.1  AUS_GDP_RULC_LAB_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_RULC_LAB_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value                    series region    source
+0 1985-12-31    1.2  AUS_GDP_RULC_LAB_M6_30_Q    AUS  ABS_SDMX
+1 1986-03-31    1.1  AUS_GDP_RULC_LAB_M6_30_Q    AUS  ABS_SDMX
+2 1986-06-30    0.3  AUS_GDP_RULC_LAB_M6_30_Q    AUS  ABS_SDMX
+3 1986-09-30   -0.5  AUS_GDP_RULC_LAB_M6_30_Q    AUS  ABS_SDMX
+4 1986-12-31   -1.2  AUS_GDP_RULC_LAB_M6_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_SAV_M3_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30    736  AUS_GDP_SAV_M3_10_Q    AUS  ABS_SDMX
+1 1959-12-31    892  AUS_GDP_SAV_M3_10_Q    AUS  ABS_SDMX
+2 1960-03-31    459  AUS_GDP_SAV_M3_10_Q    AUS  ABS_SDMX
+3 1960-06-30    400  AUS_GDP_SAV_M3_10_Q    AUS  ABS_SDMX
+4 1960-09-30    768  AUS_GDP_SAV_M3_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_SAV_M3_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30    582  AUS_GDP_SAV_M3_20_Q    AUS  ABS_SDMX
+1 1959-12-31    600  AUS_GDP_SAV_M3_20_Q    AUS  ABS_SDMX
+2 1960-03-31    597  AUS_GDP_SAV_M3_20_Q    AUS  ABS_SDMX
+3 1960-06-30    661  AUS_GDP_SAV_M3_20_Q    AUS  ABS_SDMX
+4 1960-09-30    679  AUS_GDP_SAV_M3_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_SAV_M3_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30  580.0  AUS_GDP_SAV_M3_30_Q    AUS  ABS_SDMX
+1 1959-12-31  594.0  AUS_GDP_SAV_M3_30_Q    AUS  ABS_SDMX
+2 1960-03-31  618.0  AUS_GDP_SAV_M3_30_Q    AUS  ABS_SDMX
+3 1960-06-30  651.0  AUS_GDP_SAV_M3_30_Q    AUS  ABS_SDMX
+4 1960-09-30  676.0  AUS_GDP_SAV_M3_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M5_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   54.3  AUS_GDP_TTR_M5_10_Q    AUS  ABS_SDMX
+1 1959-12-31   53.0  AUS_GDP_TTR_M5_10_Q    AUS  ABS_SDMX
+2 1960-03-31   54.2  AUS_GDP_TTR_M5_10_Q    AUS  ABS_SDMX
+3 1960-06-30   55.5  AUS_GDP_TTR_M5_10_Q    AUS  ABS_SDMX
+4 1960-09-30   53.3  AUS_GDP_TTR_M5_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M5_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   53.2  AUS_GDP_TTR_M5_20_Q    AUS  ABS_SDMX
+1 1959-12-31   52.2  AUS_GDP_TTR_M5_20_Q    AUS  ABS_SDMX
+2 1960-03-31   55.5  AUS_GDP_TTR_M5_20_Q    AUS  ABS_SDMX
+3 1960-06-30   56.1  AUS_GDP_TTR_M5_20_Q    AUS  ABS_SDMX
+4 1960-09-30   52.0  AUS_GDP_TTR_M5_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M5_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-09-30   52.8  AUS_GDP_TTR_M5_30_Q    AUS  ABS_SDMX
+1 1959-12-31   53.6  AUS_GDP_TTR_M5_30_Q    AUS  ABS_SDMX
+2 1960-03-31   54.4  AUS_GDP_TTR_M5_30_Q    AUS  ABS_SDMX
+3 1960-06-30   54.6  AUS_GDP_TTR_M5_30_Q    AUS  ABS_SDMX
+4 1960-09-30   54.2  AUS_GDP_TTR_M5_30_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M6_10_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   -2.3  AUS_GDP_TTR_M6_10_Q    AUS  ABS_SDMX
+1 1960-03-31    2.2  AUS_GDP_TTR_M6_10_Q    AUS  ABS_SDMX
+2 1960-06-30    2.4  AUS_GDP_TTR_M6_10_Q    AUS  ABS_SDMX
+3 1960-09-30   -3.9  AUS_GDP_TTR_M6_10_Q    AUS  ABS_SDMX
+4 1960-12-31    4.0  AUS_GDP_TTR_M6_10_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M6_20_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31   -1.8  AUS_GDP_TTR_M6_20_Q    AUS  ABS_SDMX
+1 1960-03-31    6.2  AUS_GDP_TTR_M6_20_Q    AUS  ABS_SDMX
+2 1960-06-30    1.0  AUS_GDP_TTR_M6_20_Q    AUS  ABS_SDMX
+3 1960-09-30   -7.2  AUS_GDP_TTR_M6_20_Q    AUS  ABS_SDMX
+4 1960-12-31    5.2  AUS_GDP_TTR_M6_20_Q    AUS  ABS_SDMX
+
+--- AUS_GDP_TTR_M6_30_Q.parquet ---
+  Columns: ['date', 'value', 'series', 'region', 'source']
+  Head:
+        date  value               series region    source
+0 1959-12-31    1.5  AUS_GDP_TTR_M6_30_Q    AUS  ABS_SDMX
+1 1960-03-31    1.4  AUS_GDP_TTR_M6_30_Q    AUS  ABS_SDMX
+2 1960-06-30    0.4  AUS_GDP_TTR_M6_30_Q    AUS  ABS_SDMX
+3 1960-09-30   -0.8  AUS_GDP_TTR_M6_30_Q    AUS  ABS_SDMX
+4 1960-12-31   -2.4  AUS_GDP_TTR_M6_30_Q    AUS  ABS_SDMX

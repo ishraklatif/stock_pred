@@ -196,6 +196,13 @@ CANONICAL_MAP: Dict[str, str] = {
     "84423029T": "ABS_UNEMP",
     "2304657V": "ABS_GDP",
 
+    "AUS_GDP_CHAIN_SA": "AUS_GDP",          # real chain volume GDP, seasonally adjusted
+    "AUS_TOT_INDEX": "AUS_TOT",             # terms of trade index
+
+    # if your raw filenames differ, map those too
+    "AUS_NA_GDP_CHAIN_SA": "AUS_GDP",
+    "AUS_NA_TOT_INDEX": "AUS_TOT",
+
 
 
 
